@@ -11,16 +11,20 @@ public class SecretaryMenu extends JFrame {
 	public SecretaryMenu(){
 	     this.setLayout(new BorderLayout());
 	     
-	     JPanel myPanel = new JPanel();
+	     JPanel buttonPanel = new JPanel();
+	     JButton orderButton = new JButton("Order");
+	     JButton speciesButton = new JButton("Species");
+	     JButton customerButton = new JButton("Customer");
+	     JButton categoryButton = new JButton("Category");
 	     
-	     myPanel.setLayout(new GridLayout(2,2));
+	     buttonPanel.setLayout(new GridLayout(2,2));
 	
-	     myPanel.add(new JButton("Order"));
-	     myPanel.add(new JButton("Species"));
-	     myPanel.add(new JButton("Customer"));
-	     myPanel.add(new JButton("Category"));
+	     buttonPanel.add(orderButton);
+	     buttonPanel.add(speciesButton);
+	     buttonPanel.add(customerButton);
+	     buttonPanel.add(categoryButton);
 	
-	     this.add(myPanel, BorderLayout.CENTER);
+	     this.add(buttonPanel, BorderLayout.CENTER);
     }
 }
 

@@ -15,23 +15,25 @@ public class CreateSpecie extends JPanel{
 	public CreateSpecie(){
 	    this.setLayout(new BorderLayout());
 	    
-	    JPanel myFirstPanel = new JPanel();
-	    JPanel mySecondPanel = new JPanel();
-	    JLabel myFirstLabel = new JLabel("Specie : ");
-	    JLabel mySecondLabel = new JLabel("Category : ");
-	    JTextField myJTF = new JTextField();
-	    JComboBox myComboBox = new JComboBox();
+	    JPanel buttonPanel = new JPanel();
+	    JPanel entryPanel = new JPanel();
+	    JButton createButton = new JButton("Create");
+	    JButton cancelButton = new JButton("Cancel");
+	    JLabel speciesLabel = new JLabel("Species : ");
+	    JLabel categoryLabel = new JLabel("Category : ");
+	    JTextField speciesTF = new JTextField();
+	    JComboBox categoryCB = new JComboBox();
 
-	    myFirstPanel.setLayout(new GridLayout(1,2));
-	    myFirstPanel.add(new JButton("Create"));
-	    myFirstPanel.add(new JButton("Return"));
+	    buttonPanel.setLayout(new GridLayout(1,2));
+	    buttonPanel.add(createButton);
+	    buttonPanel.add(cancelButton);
 	    
-	    mySecondPanel.add(myFirstLabel);
-	    mySecondPanel.add(myJTF);
-	    mySecondPanel.add(mySecondLabel);
-	    mySecondPanel.add(myComboBox);
+	    entryPanel.add(speciesLabel);
+	    entryPanel.add(speciesTF);
+	    entryPanel.add(categoryLabel);
+	    entryPanel.add(categoryCB);
 	    
-	    this.add(myFirstPanel, BorderLayout.SOUTH);
-	    this.add(mySecondPanel, BorderLayout.CENTER);
+	    this.add(buttonPanel, BorderLayout.SOUTH);
+	    this.add(entryPanel, BorderLayout.CENTER);
 	}
 }

@@ -14,19 +14,21 @@ public class CreateCustomer extends JPanel{
 	public CreateCustomer(){
 	    this.setLayout(new BorderLayout());
 	    
-	    JPanel myFirstPanel = new JPanel();
-	    JPanel mySecondPanel = new JPanel();
-	    JLabel myLabel = new JLabel("Category : ");
-	    JTextField myJTF = new JTextField();
+	    JPanel buttonPanel = new JPanel();
+	    JPanel entryPanel = new JPanel();
+	    JButton createButton = new JButton("Create");
+	    JButton cancelButton = new JButton("Cancel");
+	    JLabel categoryLabel = new JLabel("Category : ");
+	    JTextField categoryTF = new JTextField();
 	    
-	    myFirstPanel.setLayout(new GridLayout(1,2));
-	    myFirstPanel.add(new JButton("Create"));
-	    myFirstPanel.add(new JButton("Return"));
+	    buttonPanel.setLayout(new GridLayout(1,2));
+	    buttonPanel.add(createButton);
+	    buttonPanel.add(cancelButton);
 	    
-	    mySecondPanel.add(myLabel);
-	    mySecondPanel.add(myJTF);
+	    entryPanel.add(categoryLabel);
+	    entryPanel.add(categoryTF);
 	    
-	    this.add(myFirstPanel, BorderLayout.CENTER);
-	    this.add(mySecondPanel, BorderLayout.NORTH);
+	    this.add(buttonPanel, BorderLayout.CENTER);
+	    this.add(entryPanel, BorderLayout.NORTH);
 	}
 }

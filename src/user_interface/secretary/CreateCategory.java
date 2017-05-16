@@ -18,10 +18,12 @@ public class CreateCategory extends JPanel{
 	    
 	    JPanel buttonPanel = new JPanel();
 	    JPanel formPanel = new JPanel();
+	    JButton createButton = new JButton("Create");
+	    JButton cancelButton = new JButton("Cancel");
 	    
 	    buttonPanel.setLayout(new GridLayout(1,2));
-	    buttonPanel.add(new JButton("Create"));
-	    buttonPanel.add(new JButton("Cancel"));
+	    buttonPanel.add(createButton);
+	    buttonPanel.add(cancelButton);
 	    
 	    formPanel.add(myLabel);
 	    formPanel.add(myJTF);

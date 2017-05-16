@@ -15,19 +15,21 @@ public class CreateOrder extends JPanel{
 
 	    this.setLayout(new BorderLayout());
 	    
-	    JPanel myFirstPanel = new JPanel();
+	    JPanel buttonPanel = new JPanel();
 	    JPanel mySecondPanel = new JPanel();
+	    JButton myFirstButton = new JButton("Create");
+	    JButton mySecondButton = new JButton("Cancel");
 	    JLabel myLabel = new JLabel("Category : ");
 	    JTextField myJTF = new JTextField();
 	    
-	    myFirstPanel.setLayout(new GridLayout(1,2));
-	    myFirstPanel.add(new JButton("Create"));
-	    myFirstPanel.add(new JButton("Return"));
+	    buttonPanel.setLayout(new GridLayout(1,2));
+	    buttonPanel.add(myFirstButton);
+	    buttonPanel.add(mySecondButton);
 	    
 	    mySecondPanel.add(myLabel);
 	    mySecondPanel.add(myJTF);
 	    
-	    this.add(myFirstPanel, BorderLayout.CENTER);
+	    this.add(buttonPanel, BorderLayout.CENTER);
 	    this.add(mySecondPanel, BorderLayout.NORTH);
 	}
 }
