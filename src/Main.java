@@ -16,10 +16,9 @@ public class Main {
 //		Home h = new Home();
 //		CreateSpecies c = new CreateSpecies();
 //		ValidatorMenu m = new ValidatorMenu();
-//		CreateCategory g = new CreateCategory ();
-		
+	    CreateCategory g = new CreateCategory ();
 		ExploreOrder o = new ExploreOrder();
-		j.add(o);
+		j.add(g);
 		j.setVisible(true);
 	}
 }

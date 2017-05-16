@@ -18,7 +18,7 @@ public class CreateCategory extends JPanel{
 	    JLabel title = new JLabel("CATEGORY CREATION",JLabel.CENTER);
 	    
 	    JPanel entryPanel = new JPanel();
-	    entryPanel.setLayout(new GridLayout(2,1));
+	    entryPanel.setLayout(new GridLayout(1,2));
 	    JLabel categoryLabel = new JLabel("Category : ");
 	    JTextField newCategory = new JTextField();
 	    
@@ -26,7 +26,7 @@ public class CreateCategory extends JPanel{
 	    entryPanel.add(newCategory);
 	    
 	    JPanel buttonPanel = new JPanel();
-	    buttonPanel.setLayout(new GridLayout(2,1));
+	    buttonPanel.setLayout(new GridLayout(1,2));
 	    JButton createButton = new JButton("Create");
 	    JButton cancelButton = new JButton("Cancel");
 	    
