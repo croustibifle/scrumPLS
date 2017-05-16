@@ -9,11 +9,10 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class CreateCategory extends JFrame{ 
+public class CreateOrder extends JPanel{ 
 	
-	public CreateCategory(){
-		this.setTitle("Category creation");
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	public CreateOrder(){
+
 	    this.setLayout(new BorderLayout());
 	    
 	    JPanel myFirstPanel = new JPanel();
