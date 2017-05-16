@@ -17,7 +17,7 @@ class Customer {
   public final String getTown() {
     return town;
   }
-
+ 
   /**
    * Constructor for the customer
    * 
@@ -25,6 +25,14 @@ class Customer {
    * @param t town for the customer
    */
   public Customer(String n, String t) {
+	if(!n.isEmpty())
+	{
+		n = n.substring(0,1).toUpperCase() + n.substring(1).toLowerCase();
+	}
+	if(!t.isEmpty())
+	{
+		t = t.substring(0,1).toUpperCase() + t.substring(1).toLowerCase();
+	}
 	name = n;
 	town = t;
 	orders = new ArrayList<Order>();
