@@ -3,6 +3,7 @@ import javax.swing.JFrame;
 import user_interface.MainFrame;
 import user_interface.home.Home;
 import user_interface.secretary.CreateSpecies;
+import user_interface.validator.ValidatorMenu;
 
 public class Main {
 
@@ -11,7 +12,8 @@ public class Main {
 		MainFrame j = new MainFrame();
 		Home h = new Home();
 		CreateSpecies c = new CreateSpecies();
-		j.add(h);
+		ValidatorMenu m = new ValidatorMenu();
+		j.add(m);
 		j.setVisible(true);
 	}
 }
