@@ -9,8 +9,6 @@ import javax.swing.JPanel;
 public class SecretaryMenu extends JFrame {
 
 	public SecretaryMenu(){
-		 this.setTitle("Secretary Menu");
-	     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	     this.setLayout(new BorderLayout());
 	     
 	     JPanel myPanel = new JPanel();
@@ -23,8 +21,6 @@ public class SecretaryMenu extends JFrame {
 	     myPanel.add(new JButton("Category"));
 	
 	     this.add(myPanel, BorderLayout.CENTER);
-	     this.setSize(700, 500);
-	     this.setVisible(true);
     }
 }
 
