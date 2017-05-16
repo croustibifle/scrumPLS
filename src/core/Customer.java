@@ -3,19 +3,11 @@ package core;
 import java.util.*;
 
 class Customer {
-  /**
-   * The different orders for the customer
-   */
+
   private List<Order> orders;
 
-  /**
-   * Name of the customer
-   */
   private String name;
 
-  /**
-   * Address (only the town) from the customer
-   */
   private String town;
 
   public final String getName() {
