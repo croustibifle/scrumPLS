@@ -1,4 +1,4 @@
-package interface_utilisateur;
+package interface_utilisateur.secretary;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 

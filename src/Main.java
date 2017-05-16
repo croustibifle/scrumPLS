@@ -1,4 +1,4 @@
-import interface_utilisateur.SecretaryMenu;
+import interface_utilisateur.secretary.SecretaryMenu;
 
 public class Main {
 
