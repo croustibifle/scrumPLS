@@ -1,10 +1,15 @@
 package user_interface.validator;
-import java.awt.*;
-import javax.swing.*;
-import net.miginfocom.swing.*;
+import java.awt.Dimension;
+import java.awt.Font;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
 /*
  * Created by JFormDesigner on Tue May 16 15:59:14 CEST 2017
  */
+import net.miginfocom.swing.MigLayout;
 
 
 
@@ -71,4 +76,5 @@ public class Validator extends JPanel {
 	private JButton button1;
 	private JButton button2;
 	// JFormDesigner - End of variables declaration  //GEN-END:variables
+
 }
