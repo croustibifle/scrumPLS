@@ -59,6 +59,7 @@ public class CreateOrder extends JPanel{
 	    
 	    this.add(title, BorderLayout.NORTH);
 	    this.add(entryPanel, BorderLayout.CENTER);
-	    this.add(buttonPanel, BorderLayout.SOUTH);	    
+	    this.add(buttonPanel, BorderLayout.SOUTH);	 
+	    this.setVisible(true);
 	}
 }
