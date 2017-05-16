@@ -1,5 +1,69 @@
 package user_interface.home;
 
-public class Home {
+import java.awt.*;
+import javax.swing.*;
 
+public class Home extends JPanel{
+	
+	private JLabel label3;
+	private JLabel label1;
+	private JTextField textField1;
+	private JLabel label2;
+	private JTextField textField2;
+	private JButton button1;
+
+	public Home() {
+		initComponents();
+	}
+
+	private void initComponents() {
+		label3 = new JLabel();
+		label1 = new JLabel();
+		textField1 = new JTextField();
+		label2 = new JLabel();
+		textField2 = new JTextField();
+		button1 = new JButton();
+
+		setLayout(new GridBagLayout());
+		((GridBagLayout)getLayout()).columnWidths = new int[] {76, 58, 94, 73, 77, 0, 76, 106, 56, 70, 0, 0};
+		((GridBagLayout)getLayout()).rowHeights = new int[] {53, 61, 95, 49, 54, 55, 48, 54, 76, 0};
+		((GridBagLayout)getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0E-4};
+		((GridBagLayout)getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0E-4};
+
+		//---- label3 ----
+		label3.setText("GENINDEXE LABORATORY");
+		label3.setFont(label3.getFont().deriveFont(label3.getFont().getSize() + 10f));
+		add(label3, new GridBagConstraints(3, 2, 6, 1, 0.0, 0.0,
+			GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+			new Insets(0, 0, 5, 5), 0, 0));
+
+		//---- label1 ----
+		label1.setText("Login :");
+		label1.setFont(label1.getFont().deriveFont(label1.getFont().getSize() + 3f));
+		add(label1, new GridBagConstraints(3, 3, 1, 1, 0.0, 0.0,
+			GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+			new Insets(0, 0, 5, 5), 0, 0));
+		add(textField1, new GridBagConstraints(4, 3, 4, 1, 0.0, 0.0,
+			GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+			new Insets(0, 0, 5, 5), 0, 0));
+
+		//---- label2 ----
+		label2.setText("Password :");
+		label2.setFont(label2.getFont().deriveFont(label2.getFont().getSize() + 3f));
+		add(label2, new GridBagConstraints(3, 5, 1, 1, 0.0, 0.0,
+			GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+			new Insets(0, 0, 5, 5), 0, 0));
+		add(textField2, new GridBagConstraints(4, 5, 4, 1, 0.0, 0.0,
+			GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+			new Insets(0, 0, 5, 5), 0, 0));
+
+		//---- button1 ----
+		button1.setText("Login");
+		button1.setFont(button1.getFont().deriveFont(button1.getFont().getSize() + 3f));
+		button1.setForeground(Color.WHITE);
+		button1.setBackground(new Color(0, 153, 255));
+		add(button1, new GridBagConstraints(9, 5, 2, 1, 0.0, 0.0,
+			GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+			new Insets(0, 0, 5, 0), 0, 0));
+	}
 }
