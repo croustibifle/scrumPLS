@@ -10,12 +10,12 @@ public class Main {
 	public static void main(String[] args) {
 		new MainFrame();
 		MainFrame j = new MainFrame();
-		Home h = new Home();
-		CreateSpecies c = new CreateSpecies();
-		ValidatorMenu m = new ValidatorMenu();
-		CreateCategory g = new CreateCategory ();
-		ExploreOrder o = new ExploreOrder();
+//		Home h = new Home();
+//		CreateSpecies c = new CreateSpecies();
+//		ValidatorMenu m = new ValidatorMenu();
+//		CreateCategory g = new CreateCategory ();
 		
+		ExploreOrder o = new ExploreOrder();
 		j.add(o);
 		j.setVisible(true);
 	}
