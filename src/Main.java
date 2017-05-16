@@ -14,7 +14,7 @@ public class Main {
 		Home h = new Home();
 		CreateSpecies c = new CreateSpecies();
 		ValidatorMenu m = new ValidatorMenu();
-		CreateCategory g = new CreateCategory();
+		CreateCategory g = new CreateCategory ();
 		
 		j.add(m);
 		j.setVisible(true);

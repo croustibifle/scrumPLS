@@ -38,5 +38,6 @@ public class CreateCategory extends JPanel{
 	    this.add(entryPanel, BorderLayout.CENTER);
 	    this.setVisible(true);
 	    
+	    
 	}
 }
