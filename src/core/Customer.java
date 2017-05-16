@@ -17,7 +17,7 @@ class Customer {
   public final String getTown() {
     return town;
   }
-
+ 
   /**
    * Constructor for the customer
    * 
