@@ -13,6 +13,8 @@ public class Customers {
 	{
 		if(!name.isEmpty() && !city.isEmpty())
 		{
+			name = name.substring(0,1).toUpperCase() + name.substring(1).toLowerCase();
+			city = city.substring(0,1).toUpperCase() + city.substring(1).toLowerCase();
 			boolean b = true;
 			for(Customer t : liste)
 			{
