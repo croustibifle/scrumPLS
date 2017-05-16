@@ -60,7 +60,6 @@ public class ExploreOrder extends JPanel{
 		button1 = new JButton();
 
 		//======== this ========
-
 		setLayout(new GridBagLayout());
 		((GridBagLayout)getLayout()).columnWidths = new int[] {206, 268, 212, 253, 0};
 		((GridBagLayout)getLayout()).rowHeights = new int[] {184, 123, 243, 0};
@@ -200,7 +199,8 @@ public class ExploreOrder extends JPanel{
 			button1.setText("Menu");
 			button1.setFont(button1.getFont().deriveFont(button1.getFont().getSize() + 3f));
 			button1.setBackground(new Color(0, 153, 255));
-			panel1.add(button1, new GridBagConstraints(3, 10, 3, 1, 0.0, 0.0,
+			button1.setForeground(Color.WHITE);
+			panel1.add(button1, new GridBagConstraints(2, 10, 3, 1, 0.0, 0.0,
 				GridBagConstraints.CENTER, GridBagConstraints.BOTH,
 				new Insets(0, 0, 5, 5), 0, 0));
 		}
