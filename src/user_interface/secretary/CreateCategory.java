@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.GridLayout;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -11,24 +12,31 @@ import javax.swing.JTextField;
 public class CreateCategory extends JPanel{ 
 	
 	public CreateCategory(){
+		
 	    this.setLayout(new BorderLayout());
 	    
-	    JLabel myLabel = new JLabel("Category : ");
-	    JTextField myJTF = new JTextField();
+	    JLabel title = new JLabel("CATEGORY CREATION",JLabel.CENTER);
+	    
+	    JPanel entryPanel = new JPanel();
+	    entryPanel.setLayout(new GridLayout(2,1));
+	    JLabel categoryLabel = new JLabel("Category : ");
+	    JTextField newCategory = new JTextField();
+	    
+	    entryPanel.add(categoryLabel);
+	    entryPanel.add(newCategory);
 	    
 	    JPanel buttonPanel = new JPanel();
-	    JPanel formPanel = new JPanel();
+	    buttonPanel.setLayout(new GridLayout(2,1));
 	    JButton createButton = new JButton("Create");
 	    JButton cancelButton = new JButton("Cancel");
 	    
-	    buttonPanel.setLayout(new GridLayout(1,2));
 	    buttonPanel.add(createButton);
 	    buttonPanel.add(cancelButton);
 	    
-	    formPanel.add(myLabel);
-	    formPanel.add(myJTF);
+	    this.add(title, BorderLayout.NORTH);
+	    this.add(buttonPanel, BorderLayout.SOUTH);
+	    this.add(entryPanel, BorderLayout.CENTER);
+	    this.setVisible(true);
 	    
-	    this.add(buttonPanel, BorderLayout.CENTER);
-	    this.add(formPanel, BorderLayout.NORTH);
 	}
 }
