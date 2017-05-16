@@ -13,6 +13,7 @@ public class Main {
 		Home h = new Home();
 		CreateSpecies c = new CreateSpecies();
 		ValidatorMenu m = new ValidatorMenu();
+		
 		j.add(m);
 		j.setVisible(true);
 	}
