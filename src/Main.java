@@ -12,5 +12,6 @@ public class Main {
 		Home h = new Home();
 		CreateSpecies c = new CreateSpecies();
 		j.add(h);
+		j.setVisible(true);
 	}
 }
