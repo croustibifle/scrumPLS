@@ -9,6 +9,10 @@ class Specie {
   private String name;
 
   public Specie(String n) {
+	if(!n.isEmpty())
+	{
+		n = n.substring(0,1).toUpperCase() + n.substring(1).toLowerCase();
+	}
 	name = n;
   }
 
