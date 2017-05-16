@@ -27,6 +27,10 @@ public class Customers {
 				liste.add(new Customer(name, city));
 			}
 		}
-		
+	}
+	
+	public ArrayList<Customer> getListe()
+	{
+		return liste;
 	}
 }
