@@ -1,4 +1,4 @@
-package noyau;
+package core;
 
 /**
  * Creates a new result for a Scrapie Test

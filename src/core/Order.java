@@ -1,4 +1,4 @@
-package noyau;
+package core;
 
 import java.util.*;
 

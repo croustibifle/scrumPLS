@@ -1,4 +1,4 @@
-package noyau;
+package core;
 
 /**
  * The result from an analysis for a sample
