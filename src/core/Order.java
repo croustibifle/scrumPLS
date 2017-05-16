@@ -20,10 +20,10 @@ public class Order {
 	public Order(Customer customer, SpecieCategory catheg, Specie spec, int nbSamples) {
 		if(nbSamples <= 0)
 		{
-			return;
+			nbSamples = 1;
 		}
 		this.customer = customer;
-		samples = new ArrayList<Sample>();
+		this.samples = new ArrayList<Sample>();
 		this.nbSamples = nbSamples;
 		this.catheg = catheg;
 		this.spec = spec;
@@ -35,7 +35,13 @@ public class Order {
 	}
 
 	public void setStatus(OrderStatus value) {
-		status = value;
+		if(status != OrderStatus.completed)
+		{
+			if(value == OrderStatus.inAnalysis || value == OrderStatus.completed)
+			{
+				status = value;
+			}
+		}
 	}
 
 	public final Customer getCustomer() {
@@ -46,9 +52,24 @@ public class Order {
 		return samples;
 	}
 
-	public void setSamples(ArrayList<Sample> s) {
-		samples = s;
-		status = OrderStatus.toAnalyze;
+	public void setSamples(Sample s) {
+		if(samples.size() > nbSamples)
+		{
+			samples.add(s);
+		}		
+		if(samples.size() == nbSamples)
+		{
+			status = OrderStatus.toAnalyze;
+		}
 	}
 
+	public Specie getSpecies()
+	{
+		return spec;
+	}
+	
+	public SpecieCategory getCategory()
+	{
+		return catheg;
+	}
 }
