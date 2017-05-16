@@ -6,7 +6,7 @@ class SpecieCategory {
   /**
    * Set of species that belong to this category
    */
-  private Set<Specie> species;
+  private ArrayList<Specie> species;
 
   /**
    * Description of a group for the species. For example, "birds"
@@ -17,15 +17,19 @@ class SpecieCategory {
    * Creates a new SpecieCategory
    */
   public SpecieCategory(String theName) {
-	name = theName;
-	species = new HashSet<Specie>();
+	  if(!theName.isEmpty())
+	  {
+		  theName = theName.substring(0,1).toUpperCase() + theName.substring(1).toLowerCase();
+	  }
+	  name = theName;
+	  species = new ArrayList<Specie>();
   }
 
   public final String getName() {
     return name;
   }
 
-  public final Set<Specie> getSpecies() {
+  public final ArrayList<Specie> getSpecies() {
     return species;
   }
 
