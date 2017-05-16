@@ -1,14 +1,13 @@
-import user_interface.MainFrame;
-import user_interface.secretary.SecretaryMenu;
-import user_interface.secretary.*;
-import javax.swing.*;
+import javax.swing.JFrame;
+
+import user_interface.secretary.CreateSpecies;
 
 public class Main {
 
 	public static void main(String[] args) {
 		//new MainFrame();
 		JFrame j = new JFrame();
-		CreateOrder c = new CreateOrder();
+		CreateSpecies c = new CreateSpecies();
 		j.add(c);
 		j.setVisible(true);
 		

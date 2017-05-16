@@ -1,12 +1,9 @@
 package user_interface;
 import java.awt.BorderLayout;
-import java.awt.GridLayout;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import user_interface.secretary.CreateCategory;
 import user_interface.secretary.CreateSpecie;
 
 public class MainFrame extends JFrame {
