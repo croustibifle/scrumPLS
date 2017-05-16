@@ -1,5 +1,9 @@
-import java.awt.*;
-import javax.swing.*;
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 public class SecretaryMenu extends JFrame {
 
@@ -9,6 +13,7 @@ public class SecretaryMenu extends JFrame {
 	     this.setLayout(new BorderLayout());
 	     
 	     JPanel myPanel = new JPanel();
+	     
 	     myPanel.setLayout(new GridLayout(2,2));
 	
 	     myPanel.add(new JButton("Order"));
@@ -17,8 +22,7 @@ public class SecretaryMenu extends JFrame {
 	     myPanel.add(new JButton("Category"));
 	
 	     this.add(myPanel, BorderLayout.CENTER);
-	
-	     this.pack();
+	     this.setSize(700, 500);
 	     this.setVisible(true);
     }
 }
