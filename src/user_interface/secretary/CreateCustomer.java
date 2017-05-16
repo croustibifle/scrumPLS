@@ -28,7 +28,5 @@ public class CreateCustomer extends JPanel{
 	    
 	    this.add(myFirstPanel, BorderLayout.CENTER);
 	    this.add(mySecondPanel, BorderLayout.NORTH);
-	    this.setSize(700, 500);
-	    this.setVisible(true);
 	}
 }

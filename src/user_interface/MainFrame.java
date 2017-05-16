@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import user_interface.secretary.CreateCategory;
+import user_interface.secretary.CreateSpecie;
 
 public class MainFrame extends JFrame {
 	
@@ -17,7 +18,7 @@ public class MainFrame extends JFrame {
 	     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	     this.setLayout(new BorderLayout());
 	     
-	     myPanel = new CreateCategory();
+	     myPanel = new CreateSpecie();
 	
 	     this.add(myPanel, BorderLayout.CENTER);
 	     this.setSize(700, 500);

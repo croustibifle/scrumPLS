@@ -10,11 +10,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class CreateSpecie extends JFrame{ 
+public class CreateSpecie extends JPanel{ 
 	
 	public CreateSpecie(){
-		this.setTitle("Specie creation");
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    this.setLayout(new BorderLayout());
 	    
 	    JPanel myFirstPanel = new JPanel();
@@ -35,7 +33,5 @@ public class CreateSpecie extends JFrame{
 	    
 	    this.add(myFirstPanel, BorderLayout.SOUTH);
 	    this.add(mySecondPanel, BorderLayout.CENTER);
-	    this.setSize(700, 500);
-	    this.setVisible(true);
 	}
 }
