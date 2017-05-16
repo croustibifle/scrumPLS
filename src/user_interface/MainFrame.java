@@ -4,7 +4,7 @@ import java.awt.BorderLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import user_interface.secretary.CreateSpecie;
+import user_interface.secretary.CreateSpecies;
 
 public class MainFrame extends JFrame {
 	
@@ -15,7 +15,7 @@ public class MainFrame extends JFrame {
 	     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	     this.setLayout(new BorderLayout());
 	     
-	     myPanel = new CreateSpecie();
+	     myPanel = new CreateSpecies();
 	
 	     this.add(myPanel, BorderLayout.CENTER);
 	     this.setSize(700, 500);
