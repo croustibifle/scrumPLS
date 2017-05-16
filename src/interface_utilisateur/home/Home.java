@@ -1,5 +1,5 @@
 package interface_utilisateur.home;
 
-public class Login {
+public class Home {
 
 }
