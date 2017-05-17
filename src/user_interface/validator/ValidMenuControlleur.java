@@ -20,7 +20,14 @@ public class ValidMenuControlleur implements ActionListener{
 	 {
 		 if (e.getSource() == val.getButton2()) 
 		 {
-			 ExploreOrder x = new ExploreOrder();
+			 ExploreOrder x = new ExploreOrder(j);
+			 j.remove(val);
+			 j.add(x);
+			 j.setVisible(true);
+		 }
+		 else if (e.getSource() == val.getButton3()) 
+		 {
+			 ScrapieTestMenu x = new ScrapieTestMenu();
 			 j.remove(val);
 			 j.add(x);
 			 j.setVisible(true);

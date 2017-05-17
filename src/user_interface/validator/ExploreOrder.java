@@ -28,9 +28,11 @@ public class ExploreOrder extends JPanel{
 	private JLabel label10;
 	private JLabel label17;
 	private JButton button1;
+	private JFrame j;
 	// JFormDesigner - End of variables declaration  //GEN-END:variables
 	
-	public ExploreOrder() {
+	public ExploreOrder(JFrame j) {
+		this.j = j;
 		initComponents();
 	}
 
