@@ -14,6 +14,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import core.Datas;
+
 
 
 /**
@@ -22,6 +24,7 @@ import javax.swing.JPanel;
 public class SecretaryMenu extends JPanel {
 	public SecretaryMenu(JFrame j, Datas d) {
 		this.j = j;
+		this.d = d;
 		initComponents();
 	}
 
@@ -110,5 +113,6 @@ public class SecretaryMenu extends JPanel {
 	private JButton button3;
 	private JButton button4;
 	JFrame j;
+	Datas d;
 	// JFormDesigner - End of variables declaration  //GEN-END:variables
 }

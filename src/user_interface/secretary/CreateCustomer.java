@@ -15,6 +15,8 @@ import javax.swing.JTextField;
  * Created by JFormDesigner on Wed May 17 14:53:17 CEST 2017
  */
 
+import core.Datas;
+
 
 
 /**
@@ -23,6 +25,7 @@ import javax.swing.JTextField;
 public class CreateCustomer extends JPanel {
 	public CreateCustomer(JFrame j) {
 		this.j = j;
+		this.d = d;
 		initComponents();
 	}
 
@@ -139,6 +142,7 @@ public class CreateCustomer extends JPanel {
 	private JButton button1;
 	private JButton button2;
 	private JFrame j;
+	Datas d;
 	// JFormDesigner - End of variables declaration  //GEN-END:variables
 	
 	public JButton getButton1()
