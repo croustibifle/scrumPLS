@@ -1,8 +1,10 @@
+import core.Datas;
 import user_interface.MainFrame;
 
 public class Main {
 
 	public static void main(String[] args) {
-		MainFrame m = new MainFrame();
+		Datas d = new Datas();
+		MainFrame m = new MainFrame(d);
 	}
 }

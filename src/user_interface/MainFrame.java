@@ -2,11 +2,12 @@ package user_interface;
 import javax.swing.*;
 
 import controllers.AppController;
+import core.Datas;
 
 public class MainFrame extends JFrame{
 	
 	
-	public MainFrame(){
+	public MainFrame(Datas d){
 		
 		this.setTitle("Genindex application");
 		AppController c = new AppController(this);
