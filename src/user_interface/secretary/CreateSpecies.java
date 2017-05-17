@@ -6,6 +6,8 @@ import javax.swing.*;
  * Created by JFormDesigner on Wed May 17 16:01:57 CEST 2017
  */
 
+import controllers.CreateSpeciesController;
+
 
 
 /**
@@ -13,8 +15,23 @@ import javax.swing.*;
  */
 public class CreateSpecies extends JPanel {
 	
-	public CreateSpecies() {
+	private JPanel panel1;
+	private JLabel label1;
+	private JPanel panel2;
+	private JPanel panel3;
+	private JLabel label2;
+	private JTextField textField1;
+	private JLabel label3;
+	private JComboBox comboBox1;
+	private JPanel panel4;
+	private JButton button1;
+	private JButton button2;
+	private CreateSpeciesController controller;
+	
+	public CreateSpecies(CreateSpeciesController c) {
+		controller = c;
 		initComponents();
+		addListener();
 	}
 
 	private void initComponents() {
@@ -34,13 +51,6 @@ public class CreateSpecies extends JPanel {
 
 		//======== this ========
 		setBackground(new Color(204, 0, 204));
-
-		// JFormDesigner evaluation mark
-		setBorder(new javax.swing.border.CompoundBorder(
-			new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
-				"JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
-				javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
-				java.awt.Color.red), getBorder())); addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
 
 		setLayout(new GridBagLayout());
 		((GridBagLayout)getLayout()).columnWidths = new int[] {600, 0};
@@ -83,7 +93,7 @@ public class CreateSpecies extends JPanel {
 					((GridBagLayout)panel3.getLayout()).rowWeights = new double[] {0.0, 0.0, 1.0E-4};
 
 					//---- label2 ----
-					label2.setText("Name new specie :");
+					label2.setText("Specie name :");
 					label2.setFont(label2.getFont().deriveFont(label2.getFont().getSize() + 5f));
 					panel3.add(label2, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
 						GridBagConstraints.CENTER, GridBagConstraints.VERTICAL,
@@ -148,19 +158,11 @@ public class CreateSpecies extends JPanel {
 			new Insets(0, 0, 0, 0), 0, 0));
 		// JFormDesigner - End of component initialization  //GEN-END:initComponents
 	}
-
-	// JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-	// Generated using JFormDesigner Evaluation license - Maxime Tanguy
-	private JPanel panel1;
-	private JLabel label1;
-	private JPanel panel2;
-	private JPanel panel3;
-	private JLabel label2;
-	private JTextField textField1;
-	private JLabel label3;
-	private JComboBox comboBox1;
-	private JPanel panel4;
-	private JButton button1;
-	private JButton button2;
-	// JFormDesigner - End of variables declaration  //GEN-END:variables
+	
+	private void addListener() {
+		button2.addActionListener(
+				ae ->{
+					  controller.goBack();
+					  });
+	}
 }

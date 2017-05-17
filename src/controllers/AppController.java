@@ -31,8 +31,9 @@ public class AppController {
 	}
 	
 	public void orderVizualisation() {
+		OrderVizuController c = new OrderVizuController(this);
 		frame.getContentPane().removeAll();
-		frame.add(new ExploreOrder());
+		frame.add(c.getView());
 		frame.validate();
 	}
 	
@@ -48,14 +49,23 @@ public class AppController {
 	}
 	
 	public void createOrder() {
+		CreateOrderController c = new CreateOrderController(this);
 		frame.getContentPane().removeAll();
-		frame.add(new CreateOrder());
+		frame.add(c.getView());
 		frame.validate();
 	}
 	
 	public void createCustomer() {
+		CreateCustomerController c = new CreateCustomerController(this);
 		frame.getContentPane().removeAll();
 		frame.add(new CreateCustomer());
+		frame.validate();
+	}
+	
+	public void createSpecies() {
+		CreateSpeciesController c = new CreateSpeciesController(this);
+		frame.getContentPane().removeAll();
+		frame.add(c.getView());
 		frame.validate();
 	}
 	
@@ -65,11 +75,6 @@ public class AppController {
 		frame.validate();
 	}
 	
-	public void createSpecies() {
-		frame.getContentPane().removeAll();
-		frame.add(new CreateSpecies());
-		frame.validate();
-	}
 	
 	public MainFrame getFrame(){
 		return frame;

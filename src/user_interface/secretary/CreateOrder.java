@@ -16,6 +16,8 @@ import javax.swing.JTextField;
  * Created by JFormDesigner on Wed May 17 15:27:04 CEST 2017
  */
 
+import controllers.CreateOrderController;
+
 
 
 /**
@@ -23,8 +25,30 @@ import javax.swing.JTextField;
  */
 public class CreateOrder extends JPanel {
 	
-	public CreateOrder() {
+	private JLabel label1;
+	private JPanel panel2;
+	private JLabel label2;
+	private JComboBox comboBox1;
+	private JButton button3;
+	private JLabel label3;
+	private JComboBox comboBox2;
+	private JButton button4;
+	private JLabel label4;
+	private JComboBox comboBox3;
+	private JButton button5;
+	private JLabel label5;
+	private JComboBox comboBox4;
+	private JLabel label6;
+	private JTextField textField1;
+	private JPanel panel1;
+	private JButton button1;
+	private JButton button2;
+	private CreateOrderController controller;
+	
+	public CreateOrder(CreateOrderController c) {
+		controller = c;
 		initComponents();
+		addListener();
 	}
 
 	private void initComponents() {
@@ -52,13 +76,6 @@ public class CreateOrder extends JPanel {
 		//======== this ========
 		setBackground(new Color(204, 0, 204));
 
-		// JFormDesigner evaluation mark
-		setBorder(new javax.swing.border.CompoundBorder(
-			new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
-				"JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
-				javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
-				java.awt.Color.red), getBorder())); addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
-
 		setLayout(new GridBagLayout());
 		((GridBagLayout)getLayout()).columnWidths = new int[] {21, 576, 0, 0};
 		((GridBagLayout)getLayout()).rowHeights = new int[] {80, 293, 81, 0};
@@ -81,7 +98,7 @@ public class CreateOrder extends JPanel {
 			((GridBagLayout)panel2.getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 1.0E-4};
 
 			//---- label2 ----
-			label2.setText("Name Client");
+			label2.setText("Client Name");
 			label2.setFont(label2.getFont().deriveFont(label2.getFont().getSize() + 5f));
 			panel2.add(label2, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
 				GridBagConstraints.CENTER, GridBagConstraints.VERTICAL,
@@ -113,7 +130,7 @@ public class CreateOrder extends JPanel {
 				new Insets(0, 0, 5, 0), 0, 0));
 
 			//---- label4 ----
-			label4.setText("Species");
+			label4.setText("Specie");
 			label4.setFont(label4.getFont().deriveFont(label4.getFont().getSize() + 5f));
 			panel2.add(label4, new GridBagConstraints(1, 2, 1, 1, 0.0, 0.0,
 				GridBagConstraints.CENTER, GridBagConstraints.VERTICAL,
@@ -139,7 +156,7 @@ public class CreateOrder extends JPanel {
 				new Insets(0, 0, 5, 5), 0, 0));
 
 			//---- label6 ----
-			label6.setText("Number of Sample");
+			label6.setText("Number of Samples");
 			label6.setFont(label6.getFont().deriveFont(label6.getFont().getSize() + 5f));
 			panel2.add(label6, new GridBagConstraints(1, 4, 1, 1, 0.0, 0.0,
 				GridBagConstraints.CENTER, GridBagConstraints.VERTICAL,
@@ -180,26 +197,12 @@ public class CreateOrder extends JPanel {
 			new Insets(0, 0, 0, 5), 0, 0));
 		// JFormDesigner - End of component initialization  //GEN-END:initComponents
 	}
+	
+	private void addListener(){
+		button2.addActionListener(
+				ae ->{
+					  controller.goBack();
+					  });
+	}
 
-	// JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-	// Generated using JFormDesigner Evaluation license - Hugo Muller
-	private JLabel label1;
-	private JPanel panel2;
-	private JLabel label2;
-	private JComboBox comboBox1;
-	private JButton button3;
-	private JLabel label3;
-	private JComboBox comboBox2;
-	private JButton button4;
-	private JLabel label4;
-	private JComboBox comboBox3;
-	private JButton button5;
-	private JLabel label5;
-	private JComboBox comboBox4;
-	private JLabel label6;
-	private JTextField textField1;
-	private JPanel panel1;
-	private JButton button1;
-	private JButton button2;
-	// JFormDesigner - End of variables declaration  //GEN-END:variables
 }

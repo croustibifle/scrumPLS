@@ -1,6 +1,9 @@
 package user_interface.validator;
 
 import javax.swing.*;
+
+import controllers.OrderVizuController;
+
 import java.awt.*;
 
 public class ExploreOrder extends JPanel{
@@ -28,11 +31,13 @@ public class ExploreOrder extends JPanel{
 	private JLabel label10;
 	private JLabel label17;
 	private JButton button1;
-	private JFrame j;
+	private OrderVizuController controller;
 	// JFormDesigner - End of variables declaration  //GEN-END:variables
 	
-	public ExploreOrder() {
+	public ExploreOrder(OrderVizuController c) {
 		initComponents();
+		controller = c;
+		addListener();
 	}
 
 	private void initComponents() {
@@ -209,5 +214,12 @@ public class ExploreOrder extends JPanel{
 			GridBagConstraints.CENTER, GridBagConstraints.BOTH,
 			new Insets(0, 0, 0, 0), 0, 0));
 		// JFormDesigner - End of component initialization  //GEN-END:initComponents
+	}
+	
+	private void addListener(){
+		button1.addActionListener(
+				ae ->{
+					  controller.goBack();
+					  });
 	}
 }
