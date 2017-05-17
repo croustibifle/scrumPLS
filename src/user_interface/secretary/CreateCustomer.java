@@ -15,6 +15,7 @@ import javax.swing.JTextField;
  * Created by JFormDesigner on Wed May 17 14:53:17 CEST 2017 
  */
 
+import controllers.CreateCustomerController;
 import core.Datas;
 
 
@@ -23,8 +24,22 @@ import core.Datas;
  * @author Hugo Muller
  */
 public class CreateCustomer extends JPanel {
-	public CreateCustomer() {
+	
+	private JLabel label1;
+	private JPanel panel1;
+	private JLabel label2;
+	private JTextField textField1;
+	private JLabel label3;
+	private JTextField textField2;
+	private JPanel panel2;
+	private JButton button1;
+	private JButton button2;
+	private CreateCustomerController controller;
+	
+	public CreateCustomer(CreateCustomerController c) {
+		controller = c;
 		initComponents();
+		addListener();
 	}
 
 	private void initComponents() {
@@ -117,42 +132,11 @@ public class CreateCustomer extends JPanel {
 			new Insets(0, 0, 0, 5), 0, 0));
 		// JFormDesigner - End of component initialization  //GEN-END:initComponents
 	}
-
-	// JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-	// Generated using JFormDesigner Evaluation license - Hugo Muller
-	private JLabel label1;
-	private JPanel panel1;
-	private JLabel label2;
-	private JTextField textField1;
-	private JLabel label3;
-	private JTextField textField2;
-	private JPanel panel2;
-	private JButton button1;
-	private JButton button2;
-	private JFrame j;
-	Datas d;
-	// JFormDesigner - End of variables declaration  //GEN-END:variables
 	
-	public JButton getButton1()
-	{
-		return button1;
+	private void addListener(){
+		button2.addActionListener(
+				ae ->{
+					  controller.goBack();
+					  });
 	}
-	
-	public JButton getButton2()
-	{
-		return button2;
-	}
-	
-	public JTextField getField1()
-	{
-		return textField1;
-	}
-	
-	public JTextField getField2()
-	{
-		return textField2;
-	}
-	
-	
-	
 }

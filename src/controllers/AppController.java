@@ -58,7 +58,7 @@ public class AppController {
 	public void createCustomer() {
 		CreateCustomerController c = new CreateCustomerController(this);
 		frame.getContentPane().removeAll();
-		frame.add(new CreateCustomer());
+		frame.add(c.getView());
 		frame.validate();
 	}
 	
