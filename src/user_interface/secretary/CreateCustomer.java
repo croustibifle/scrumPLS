@@ -1,3 +1,5 @@
+package user_interface.secretary;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
