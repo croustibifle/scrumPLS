@@ -22,6 +22,8 @@ public class CreateCustomerListener implements ActionListener{
 	 {
 		if (e.getSource() == cre.getButton1()) 
 		{
+			String name = cre.getField1().getText();
+			String city = cre.getField2().getText();
 			
 		}
 		else if (e.getSource() == cre.getButton2())
