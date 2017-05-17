@@ -1,11 +1,11 @@
 import core.*;
-public class Data {
+public class Datas {
 
 	private Customers c;
 	private ListeUsers l;
 	private CategoryList cl;
 	
-	public Data()
+	public Datas()
 	{
 		c = new Customers();
 		l = new ListeUsers();
