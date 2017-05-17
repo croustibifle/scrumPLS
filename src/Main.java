@@ -1,5 +1,6 @@
 import javax.swing.JFrame;
 
+import user_interface.secretary.CreateCustomer;
 import user_interface.validator.ValidatorMenu;
 
 public class Main {
@@ -11,10 +12,11 @@ public class Main {
 	    j.setSize(800, 600);
 //		Home h = new Home();
 //		CreateSpecies c = new CreateSpecies();
-		ValidatorMenu m = new ValidatorMenu(j);
+//		ValidatorMenu m = new ValidatorMenu(j);
 //	    CreateCategory g = new CreateCategory ();
 //		ExploreOrder o = new ExploreOrder();
-		j.add(m);
+	    CreateCustomer c = new CreateCustomer(j);
+		j.add(c);
 		j.setVisible(true);
 	}
 }

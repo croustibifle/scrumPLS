@@ -20,7 +20,7 @@ import javax.swing.JPanel;
  * @author Hugo Muller
  */
 public class SecretaryMenu extends JPanel {
-	public SecretaryMenu(JFrame j) {
+	public SecretaryMenu(JFrame j, Datas d) {
 		this.j = j;
 		initComponents();
 	}
