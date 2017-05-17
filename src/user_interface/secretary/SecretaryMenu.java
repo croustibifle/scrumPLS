@@ -10,11 +10,10 @@ import java.awt.Insets;
  * Created by JFormDesigner on Wed May 17 15:25:15 CEST 2017
  */
 import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import core.Datas;
+import controllers.SecretaryMenuController;
 
 
 
@@ -22,8 +21,19 @@ import core.Datas;
  * @author Hugo Muller
  */
 public class SecretaryMenu extends JPanel {
-	public SecretaryMenu() {
+	
+	private JLabel label1;
+	private JPanel panel1;
+	private JButton button1;
+	private JButton button2;
+	private JButton button3;
+	private JButton button4;
+	private SecretaryMenuController controller;
+	
+	public SecretaryMenu(SecretaryMenuController c) {
 		initComponents();
+		controller = c;
+		addListener();
 	}
 
 	private void initComponents() {
@@ -94,14 +104,24 @@ public class SecretaryMenu extends JPanel {
 			new Insets(0, 0, 5, 5), 0, 0));
 		// JFormDesigner - End of component initialization  //GEN-END:initComponents
 	}
+	
+	private void addListener(){
+		button1.addActionListener(
+				ae ->{
+					  controller.goCreateOrder();
+					  });
+		button2.addActionListener(
+				ae ->{
+					  controller.goCreateSpecies();
+					  });
+		button3.addActionListener(
+				ae ->{
+					  controller.goCreateCustomer();
+					  });
+		button4.addActionListener(
+				ae ->{
+					  controller.goCreateCategory();
+					  });
+	}
 
-	// JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-	// Generated using JFormDesigner Evaluation license - Hugo Muller
-	private JLabel label1;
-	private JPanel panel1;
-	private JButton button1;
-	private JButton button2;
-	private JButton button3;
-	private JButton button4;
-	// JFormDesigner - End of variables declaration  //GEN-END:variables
 }

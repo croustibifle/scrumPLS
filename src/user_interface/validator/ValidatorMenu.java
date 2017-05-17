@@ -13,6 +13,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+
+import controllers.ValidMenuController;
 /*
  * Created by JFormDesigner on Tue May 16 17:10:57 CEST 2017
  */
@@ -24,16 +26,24 @@ import javax.swing.JPanel;
  * @author Hugo Muller
  */
 public class ValidatorMenu extends JPanel {
-	public ValidatorMenu() {
+	
+	private JLabel label1;
+	private JPanel panel1;
+	private JButton button2;
+	private JButton button3;
+	private JPanel panel2;
+	private JLabel label2;
+	private JLabel label3;
+	private JLabel label4;
+	private JLabel label5;
+	private JLabel label6;
+	private JLabel label7;
+	private ValidMenuController controller;
+	
+	public ValidatorMenu(ValidMenuController c) {
 		initComponents();
-	}
-
-	private void button2MouseClicked(MouseEvent e) {
-		// TODO add your code here
-	}
-
-	private void button3MouseClicked(MouseEvent e) {
-		// TODO add your code here
+		controller = c;
+		addListener();
 	}
 
 	private void initComponents() {
@@ -78,15 +88,9 @@ public class ValidatorMenu extends JPanel {
 			((GridBagLayout)panel1.getLayout()).rowWeights = new double[] {0.0, 1.0E-4};
 
 			//---- button2 ----
-			button2.setText("   Visualize Order   ");
+			button2.setText("   Visualize Orders   ");
 			button2.setMaximumSize(new Dimension(160, 90));
 			button2.setFont(new Font("Tahoma", Font.PLAIN, 16));
-			button2.addMouseListener(new MouseAdapter() {
-				@Override
-				public void mouseClicked(MouseEvent e) {
-					button2MouseClicked(e);
-				}
-			});
 			panel1.add(button2, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
 				GridBagConstraints.CENTER, GridBagConstraints.NONE,
 				new Insets(0, 0, 0, 5), 100, 80));
@@ -94,12 +98,6 @@ public class ValidatorMenu extends JPanel {
 			//---- button3 ----
 			button3.setText("Create Scrapie Test");
 			button3.setFont(new Font("Tahoma", Font.PLAIN, 16));
-			button3.addMouseListener(new MouseAdapter() {
-				@Override
-				public void mouseClicked(MouseEvent e) {
-					button3MouseClicked(e);
-				}
-			});
 			panel1.add(button3, new GridBagConstraints(2, 0, 1, 1, 0.0, 0.0,
 				GridBagConstraints.CENTER, GridBagConstraints.NONE,
 				new Insets(0, 0, 0, 0), 100, 80));
@@ -158,29 +156,15 @@ public class ValidatorMenu extends JPanel {
 		// JFormDesigner - End of component initialization  //GEN-END:initComponents
 	}
 
-	// JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-	// Generated using JFormDesigner Evaluation license - Hugo Muller
-	private JLabel label1;
-	private JPanel panel1;
-	private JButton button2;
-	private JButton button3;
-	private JPanel panel2;
-	private JLabel label2;
-	private JLabel label3;
-	private JLabel label4;
-	private JLabel label5;
-	private JLabel label6;
-	private JLabel label7;
-	private JFrame j;
-	// JFormDesigner - End of variables declaration  //GEN-END:variables
 	
-	public JButton getButton2()
-	{
-		return button2;
-	}
-	
-	public JButton getButton3()
-	{
-		return button3;
+	private void addListener(){
+		button3.addActionListener(
+				ae ->{
+					  controller.goScrapieTest();
+					  });
+		button2.addActionListener(
+				ae ->{
+					  controller.goOrderVizualisation();
+					  });
 	}
 }

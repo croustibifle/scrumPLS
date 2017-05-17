@@ -22,9 +22,8 @@ import javax.swing.JTextField;
  * @author Hugo Muller
  */
 public class CreateOrder extends JPanel {
-	JFrame j;
-	public CreateOrder(JFrame j) {
-		this.j = j;
+	
+	public CreateOrder() {
 		initComponents();
 	}
 

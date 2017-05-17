@@ -12,9 +12,8 @@ import javax.swing.*;
  * @author Maxime Tanguy
  */
 public class CreateSpecies extends JPanel {
-	JFrame j;
-	public CreateSpecies(JFrame j) {
-		this.j = j;
+	
+	public CreateSpecies() {
 		initComponents();
 	}
 

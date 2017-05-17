@@ -1,7 +1,6 @@
 package controllers;
 
 import core.Datas;
-import core.User;
 import user_interface.*;
 import user_interface.secretary.*;
 import user_interface.validator.*;
@@ -18,21 +17,57 @@ public class AppController {
 	}
 	
 	public void homePage(){
-		HomeController h = new HomeController(this);
-		frame.add(h.getView());
+		HomeController c = new HomeController(this);
+		frame.add(c.getView());
 		frame.setVisible(true);
 	}
 	
 	public void validatorMenu() {
+		ValidMenuController c = new ValidMenuController(this);
 		frame.getContentPane().removeAll();
-		frame.add(new ValidatorMenu());
+		frame.add(c.getView());
 		frame.validate();
 		
 	}
 	
-	public void secretaryMenu() {
+	public void orderVizualisation() {
 		frame.getContentPane().removeAll();
-		frame.add(new SecretaryMenu());
+		frame.add(new ExploreOrder());
+		frame.validate();
+	}
+	
+	public void scrapieTest() {
+		// TODO Auto-generated method stub
+	}
+	
+	public void secretaryMenu() {
+		SecretaryMenuController c = new SecretaryMenuController(this);
+		frame.getContentPane().removeAll();
+		frame.add(c.getView());
+		frame.validate();
+	}
+	
+	public void createOrder() {
+		frame.getContentPane().removeAll();
+		frame.add(new CreateOrder());
+		frame.validate();
+	}
+	
+	public void createCustomer() {
+		frame.getContentPane().removeAll();
+		frame.add(new CreateCustomer());
+		frame.validate();
+	}
+	
+	public void createCategory() {
+		frame.getContentPane().removeAll();
+		frame.add(new CreateCategory());
+		frame.validate();
+	}
+	
+	public void createSpecies() {
+		frame.getContentPane().removeAll();
+		frame.add(new CreateSpecies());
 		frame.validate();
 	}
 	

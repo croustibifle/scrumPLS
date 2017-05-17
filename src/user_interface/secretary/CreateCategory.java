@@ -26,11 +26,8 @@ public class CreateCategory extends JPanel{
 		private JButton button3;
 		// JFormDesigner - End of variables declaration  //GEN-END:variables
 		
-		JFrame j;
 		
-	public CreateCategory(JFrame j){
-		
-		this.j = j;
+	public CreateCategory(){
 		
 	    this.setLayout(new BorderLayout());
 	    
@@ -60,14 +57,6 @@ public class CreateCategory extends JPanel{
 		this.setVisible(true);
 	}
 
-	private void button1MouseClicked(MouseEvent e) {
-		// TODO add your code here
-	}
-
-	private void button2MouseClicked(MouseEvent e) {
-		// TODO add your code here
-	}
-
 	private void initComponents() {
 		// JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
 		// Generated using JFormDesigner Evaluation license - Maxime Tanguy
@@ -84,13 +73,6 @@ public class CreateCategory extends JPanel{
 		//======== panel4 ========
 		{
 			panel4.setBackground(new Color(204, 0, 204));
-
-			// JFormDesigner evaluation mark
-			panel4.setBorder(new javax.swing.border.CompoundBorder(
-				new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
-					"JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
-					javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
-					java.awt.Color.red), panel4.getBorder())); panel4.addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
 
 			panel4.setLayout(new GridBagLayout());
 			((GridBagLayout)panel4.getLayout()).columnWidths = new int[] {595, 0};
