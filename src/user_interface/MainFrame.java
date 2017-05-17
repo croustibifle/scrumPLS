@@ -8,8 +8,7 @@ public class MainFrame extends JFrame{
 	
 	private Datas datas;
 	
-	public MainFrame(Datas datas2){
-		this.datas = datas2;
+	public MainFrame(){
 		
 		this.setTitle("Genindex application");
 		HomeController c = new HomeController();

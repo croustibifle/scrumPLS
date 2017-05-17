@@ -1,29 +1,30 @@
+import java.util.ArrayList;
+
 import core.*;
 public class Datas {
 
-	private Customers c;
-	private ListeUsers l;
-	private CategoryList cl;
+	private ArrayList<Customer> custList;
+	private ArrayList<User> userList;
+	private CategoryList catList;
 	
 	public Datas()
 	{
-		c = new Customers();
-		l = new ListeUsers();
-		cl = new CategoryList();
+		custList = new ArrayList<Customer>();
+		userList = new ArrayList<User>();
+		catList = new CategoryList();
+	}
+
+	public ArrayList<Customer> getCustList() {
+		return custList;
+	}
+
+	public ArrayList<User> getUserList() {
+		return userList;
+	}
+
+	public CategoryList getCatList() {
+		return catList;
 	}
 	
-	public Customers getCust()
-	{
-		return c;
-	}
 	
-	public ListeUsers getUsers()
-	{
-		return l;
-	}
-	
-	public CategoryList getCateg()
-	{
-		return cl;
-	}
 }

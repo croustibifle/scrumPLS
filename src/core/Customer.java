@@ -2,7 +2,7 @@ package core;
 
 import java.util.*;
 
-class Customer {
+public class Customer {
 
   private List<Order> orders;
 
