@@ -31,4 +31,13 @@ public class Datas {
 		userList.addUser(login, password, type);
 	}
 	
+	public User testCo(String login, String password){
+		for (User u : userList.getListe()) {
+			if (login.equals(u.getPseudo()) && password.equals(u.getMdp())){
+				return u;
+			}
+		}
+		return null;
+	}
+	
 }

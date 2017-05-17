@@ -13,7 +13,7 @@ public class HomeController {
 	}
 	
 	public void submitForm(){	
-		User u = app.testCo(view.getLoginField(),view.getPasswordField());
+		User u = app.getDatas().testCo(view.getLoginField(),view.getPasswordField());
 		if (u != null && u.getType().equals("validator"))
 			app.validatorMenu();
 		else if (u != null && u.getType().equals("secretary"))

@@ -36,15 +36,6 @@ public class AppController {
 		frame.validate();
 	}
 	
-	public User testCo(String login, String password){
-		for (User u : datas.getUserList().getListe()) {
-			if (login.equals(u.getPseudo()) && password.equals(u.getMdp())){
-				return u;
-			}
-		}
-		return null;
-	}
-	
 	public MainFrame getFrame(){
 		return frame;
 	}
