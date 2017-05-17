@@ -27,6 +27,9 @@ public class CreateCustomerListener implements ActionListener{
 		else if (e.getSource() == cre.getButton2())
 		{
 			SecretaryMenu sm = new SecretaryMenu(j);
+			j.remove(cre);
+			 j.add(sm);
+			 j.setVisible(true);
 			
 		}
 		 
