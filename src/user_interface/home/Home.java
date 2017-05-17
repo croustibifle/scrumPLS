@@ -17,7 +17,8 @@ public class Home extends JPanel{
 
 	public Home(HomeController c) {
 		initComponents();
-		this.controller = c;
+		controller = c;
+		addListener();
 	}
 
 	private void initComponents() {
@@ -73,11 +74,15 @@ public class Home extends JPanel{
 	
 
 	private void addListener(){
-		this.button1.addActionListener(
+		button1.addActionListener(
 				ae ->{
-					this.controller.submitForm();
-				});
+					  controller.submitForm();
+					  });
 	}
+	
+	public void error(){
+		JOptionPane.showMessageDialog(this, "Les identifiants sont incorrects", "Error", JOptionPane.ERROR_MESSAGE);
+}
 
 	public String getLoginField() {
 		return loginField.getText();

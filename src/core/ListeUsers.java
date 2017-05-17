@@ -16,7 +16,7 @@ public class ListeUsers {
 			boolean b = true;
 			for(User u : liste)
 			{
-				if(u.getPseudo() == name)
+				if(u.getPseudo().equals(name))
 				{
 					b = false;
 					break;
@@ -25,7 +25,7 @@ public class ListeUsers {
 			
 			if(b)
 			{
-				liste.add(new User(name,mdp, type));
+				liste.add(new User(name, mdp, type));
 			}
 		}
 	}

@@ -27,5 +27,8 @@ public class Datas {
 		return catList;
 	}
 	
+	public void addUser(String login, String password, String type){
+		userList.addUser(login, password, type);
+	}
 	
 }

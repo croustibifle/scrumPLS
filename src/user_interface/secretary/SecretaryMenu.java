@@ -22,9 +22,7 @@ import core.Datas;
  * @author Hugo Muller
  */
 public class SecretaryMenu extends JPanel {
-	public SecretaryMenu(JFrame j, Datas d) {
-		this.j = j;
-		this.d = d;
+	public SecretaryMenu() {
 		initComponents();
 	}
 
@@ -40,13 +38,6 @@ public class SecretaryMenu extends JPanel {
 
 		//======== this ========
 		setBackground(new Color(204, 0, 204));
-
-		// JFormDesigner evaluation mark
-		setBorder(new javax.swing.border.CompoundBorder(
-			new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
-				"JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
-				javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
-				java.awt.Color.red), getBorder())); addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
 
 		setLayout(new GridBagLayout());
 		((GridBagLayout)getLayout()).columnWidths = new int[] {26, 578, 21, 0};
@@ -112,7 +103,5 @@ public class SecretaryMenu extends JPanel {
 	private JButton button2;
 	private JButton button3;
 	private JButton button4;
-	JFrame j;
-	Datas d;
 	// JFormDesigner - End of variables declaration  //GEN-END:variables
 }

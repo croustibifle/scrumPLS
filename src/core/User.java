@@ -18,6 +18,7 @@ public class User {
 	{
 		this.pseudo = pseudo;
 		this.mdp = mdp;
+		this.type = type;
 	}
 	
 	public String getMdp()

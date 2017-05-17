@@ -23,10 +23,8 @@ import javax.swing.JPanel;
  * @author Hugo Muller
  */
 public class ValidatorMenu extends JPanel {
-	public ValidatorMenu(JFrame j) {
-		this.j = j;
+	public ValidatorMenu() {
 		initComponents();
-		
 	}
 
 	private void button2MouseClicked(MouseEvent e) {
@@ -54,13 +52,6 @@ public class ValidatorMenu extends JPanel {
 
 		//======== this ========
 		setBackground(new Color(102, 0, 102));
-
-		// JFormDesigner evaluation mark
-		setBorder(new javax.swing.border.CompoundBorder(
-			new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
-				"JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
-				javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
-				java.awt.Color.red), getBorder())); addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
 
 		setLayout(new GridBagLayout());
 		((GridBagLayout)getLayout()).columnWidths = new int[] {0, 164, 330, 152, 0, 0};
