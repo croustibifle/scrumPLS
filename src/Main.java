@@ -5,6 +5,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		Datas d = new Datas();
+		
 		MainFrame m = new MainFrame(d);
 	}
 }
