@@ -12,7 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 /*
- * Created by JFormDesigner on Wed May 17 14:53:17 CEST 2017
+ * Created by JFormDesigner on Wed May 17 14:53:17 CEST 2017 
  */
 
 import core.Datas;
