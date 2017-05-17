@@ -10,6 +10,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 /*
@@ -22,8 +23,10 @@ import javax.swing.JPanel;
  * @author Hugo Muller
  */
 public class ValidatorMenu extends JPanel {
-	public ValidatorMenu() {
+	public ValidatorMenu(JFrame j) {
+		this.j = j;
 		initComponents();
+		
 	}
 
 	private void button2MouseClicked(MouseEvent e) {
@@ -86,6 +89,8 @@ public class ValidatorMenu extends JPanel {
 			button2.setText("   Visualize Order   ");
 			button2.setMaximumSize(new Dimension(160, 90));
 			button2.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			ValidMenuControlleur k = new ValidMenuControlleur(this, j);
+			button2.addActionListener(k);
 			button2.addMouseListener(new MouseAdapter() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
@@ -176,5 +181,16 @@ public class ValidatorMenu extends JPanel {
 	private JLabel label5;
 	private JLabel label6;
 	private JLabel label7;
+	private JFrame j;
 	// JFormDesigner - End of variables declaration  //GEN-END:variables
+	
+	public JButton getButton2()
+	{
+		return button2;
+	}
+	
+	public JButton getButton3()
+	{
+		return button3;
+	}
 }

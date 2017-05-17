@@ -11,7 +11,7 @@ public class Main {
 	    j.setSize(800, 600);
 //		Home h = new Home();
 //		CreateSpecies c = new CreateSpecies();
-		ValidatorMenu m = new ValidatorMenu();
+		ValidatorMenu m = new ValidatorMenu(j);
 //	    CreateCategory g = new CreateCategory ();
 //		ExploreOrder o = new ExploreOrder();
 		j.add(m);
