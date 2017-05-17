@@ -19,6 +19,7 @@ import javax.swing.JPanel;
 
 
 
+
 /**
  * @author Hugo Muller
  */
@@ -80,8 +81,6 @@ public class ValidatorMenu extends JPanel {
 			button2.setText("   Visualize Order   ");
 			button2.setMaximumSize(new Dimension(160, 90));
 			button2.setFont(new Font("Tahoma", Font.PLAIN, 16));
-			ValidMenuControlleur k = new ValidMenuControlleur(this, j);
-			button2.addActionListener(k);
 			button2.addMouseListener(new MouseAdapter() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
@@ -95,7 +94,6 @@ public class ValidatorMenu extends JPanel {
 			//---- button3 ----
 			button3.setText("Create Scrapie Test");
 			button3.setFont(new Font("Tahoma", Font.PLAIN, 16));
-			button3.addActionListener(k);
 			button3.addMouseListener(new MouseAdapter() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
