@@ -3,25 +3,29 @@ package user_interface.home;
 import java.awt.*;
 import javax.swing.*;
 
+import controllers.HomeController;
+
 public class Home extends JPanel{
 	
 	private JLabel label3;
 	private JLabel label1;
-	private JTextField textField1;
+	private JTextField loginField;
 	private JLabel label2;
-	private JTextField textField2;
+	private JTextField passwordField;
 	private JButton button1;
+	private HomeController controller;
 
-	public Home() {
+	public Home(HomeController c) {
 		initComponents();
+		this.controller = c;
 	}
 
 	private void initComponents() {
 		label3 = new JLabel();
 		label1 = new JLabel();
-		textField1 = new JTextField();
+		loginField = new JTextField();
 		label2 = new JLabel();
-		textField2 = new JTextField();
+		passwordField = new JTextField();
 		button1 = new JButton();
 
 		setLayout(new GridBagLayout());
@@ -43,7 +47,7 @@ public class Home extends JPanel{
 		add(label1, new GridBagConstraints(3, 3, 1, 1, 0.0, 0.0,
 			GridBagConstraints.CENTER, GridBagConstraints.BOTH,
 			new Insets(0, 0, 5, 5), 0, 0));
-		add(textField1, new GridBagConstraints(4, 3, 4, 1, 0.0, 0.0,
+		add(loginField, new GridBagConstraints(4, 3, 4, 1, 0.0, 0.0,
 			GridBagConstraints.CENTER, GridBagConstraints.BOTH,
 			new Insets(0, 0, 5, 5), 0, 0));
 
@@ -53,7 +57,7 @@ public class Home extends JPanel{
 		add(label2, new GridBagConstraints(3, 5, 1, 1, 0.0, 0.0,
 			GridBagConstraints.CENTER, GridBagConstraints.BOTH,
 			new Insets(0, 0, 5, 5), 0, 0));
-		add(textField2, new GridBagConstraints(4, 5, 4, 1, 0.0, 0.0,
+		add(passwordField, new GridBagConstraints(4, 5, 4, 1, 0.0, 0.0,
 			GridBagConstraints.CENTER, GridBagConstraints.BOTH,
 			new Insets(0, 0, 5, 5), 0, 0));
 
@@ -66,4 +70,22 @@ public class Home extends JPanel{
 			GridBagConstraints.CENTER, GridBagConstraints.BOTH,
 			new Insets(0, 0, 5, 0), 0, 0));
 	}
+	
+
+	private void addListener(){
+		this.button1.addActionListener(
+				ae ->{
+					this.controller.submitFormulaire();
+				});
+	}
+
+	public String getLoginField() {
+		return loginField.getText();
+	}
+
+	public String getPasswordField() {
+		return passwordField.getText();
+	}
+	
+	
 }

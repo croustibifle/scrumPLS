@@ -1,22 +1,9 @@
-import javax.swing.JFrame;
-
-import user_interface.secretary.CreateCustomer;
-import user_interface.validator.ValidatorMenu;
+import user_interface.MainFrame;
 
 public class Main {
 
 	public static void main(String[] args) {
-		JFrame j = new JFrame();
-		j.setTitle("Genindex application");
-	    j.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
-	    j.setSize(800, 600);
-//		Home h = new Home();
-//		CreateSpecies c = new CreateSpecies();
-//		ValidatorMenu m = new ValidatorMenu(j);
-//	    CreateCategory g = new CreateCategory ();
-//		ExploreOrder o = new ExploreOrder();
-	    CreateCustomer c = new CreateCustomer(j);
-		j.add(c);
-		j.setVisible(true);
+		Datas d = new Datas();
+		new MainFrame(d);
 	}
 }
