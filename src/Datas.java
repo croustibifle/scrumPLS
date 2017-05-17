@@ -3,22 +3,22 @@ import java.util.ArrayList;
 import core.*;
 public class Datas {
 
-	private ArrayList<Customer> custList;
-	private ArrayList<User> userList;
+	private Customers custList;
+	private ListeUsers userList;
 	private CategoryList catList;
 	
 	public Datas()
 	{
-		custList = new ArrayList<Customer>();
-		userList = new ArrayList<User>();
+		custList = new Customers();
+		userList = new ListeUsers();
 		catList = new CategoryList();
 	}
 
-	public ArrayList<Customer> getCustList() {
+	public Customers getCustList() {
 		return custList;
 	}
 
-	public ArrayList<User> getUserList() {
+	public ListeUsers getUserList() {
 		return userList;
 	}
 

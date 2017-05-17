@@ -75,7 +75,7 @@ public class Home extends JPanel{
 	private void addListener(){
 		this.button1.addActionListener(
 				ae ->{
-					this.controller.submitFormulaire();
+					this.controller.submitForm();
 				});
 	}
 

@@ -9,7 +9,7 @@ public class ListeUsers {
 		liste = new ArrayList<User>();
 	}
 	
-	public void addUser(String name, String mdp)
+	public void addUser(String name, String mdp, String type)
 	{
 		if(!name.isEmpty() && ! mdp.isEmpty())
 		{
@@ -25,7 +25,7 @@ public class ListeUsers {
 			
 			if(b)
 			{
-				liste.add(new User(name,mdp));
+				liste.add(new User(name,mdp, type));
 			}
 		}
 	}

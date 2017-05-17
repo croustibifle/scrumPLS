@@ -9,7 +9,7 @@ public class HomeController {
 		this.view = new Home(this);
 	}
 	
-	public void submitFormulaire(){	
+	public void submitForm(){	
 	
 	}
 
