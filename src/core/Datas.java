@@ -8,11 +8,11 @@ public class Datas {
 	private ListeUsers userList;
 	private CategoryList catList;
 	
-	public Datas()
+	public Datas(Customers custList, ListeUsers userList, CategoryList catList)
 	{
-		custList = new Customers();
-		userList = new ListeUsers();
-		catList = new CategoryList();
+		this.custList = custList;
+		this.userList = userList;
+		this.catList = catList;
 	}
 
 	public Customers getCustList() {
@@ -25,10 +25,6 @@ public class Datas {
 
 	public CategoryList getCatList() {
 		return catList;
-	}
-	
-	public void addUser(String login, String password, String type){
-		userList.addUser(login, password, type);
 	}
 	
 	public User testCo(String login, String password){

@@ -18,7 +18,7 @@ public class Customers {
 			boolean b = true;
 			for(Customer t : liste)
 			{
-				if(t.getName() == name && t.getTown() == city)
+				if(t.getName().equals(name) && t.getTown().equals(city))
 				{
 					b = false;
 					break;

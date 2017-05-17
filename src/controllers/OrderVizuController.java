@@ -20,5 +20,8 @@ public class OrderVizuController {
 	public ExploreOrder getView() {
 		return view;
 	}
-
+	
+	public AppController getApp(){
+		return app;
+	}
 }

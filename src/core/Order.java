@@ -53,7 +53,7 @@ public class Order {
 	}
 
 	public void setSamples(Sample s) {
-		if(samples.size() > nbSamples)
+		if(samples.size() < nbSamples)
 		{
 			samples.add(s);
 		}		
@@ -72,4 +72,8 @@ public class Order {
 	{
 		return catheg;
 	}
+	
+	  public String toString(){
+		  return "Order n°" + (this.getCustomer().getOrders().indexOf(this)+1);
+	  }
 }

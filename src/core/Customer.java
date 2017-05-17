@@ -42,5 +42,9 @@ public class Customer {
   public final List<Order> getOrders() {
     return orders;
   }
+  
+  public String toString(){
+	  return name;
+  }
 
 }

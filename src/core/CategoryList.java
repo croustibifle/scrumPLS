@@ -19,7 +19,7 @@ public class CategoryList {
 		boolean b = true;
 		for(SpecieCategory t : liste)
 		{
-			if(theName == t.getName())
+			if(t.getName().equals(theName))
 			{
 				b = false;
 				break;
@@ -71,6 +71,10 @@ public class CategoryList {
 				liste.get(i).addSpecie(new Specie(theName));
 			}
 		}
+	}
+	
+	public ArrayList<SpecieCategory> getListe(){
+		return liste;
 	}
 	
 }

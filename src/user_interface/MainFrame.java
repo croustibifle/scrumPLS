@@ -2,7 +2,6 @@ package user_interface;
 import javax.swing.*;
 
 import controllers.AppController;
-import core.Datas;
 
 public class MainFrame extends JFrame{
 	
