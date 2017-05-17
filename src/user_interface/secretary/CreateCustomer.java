@@ -7,6 +7,7 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -20,11 +21,13 @@ import javax.swing.JTextField;
  * @author Hugo Muller
  */
 public class CreateCustomer extends JPanel {
-	public CreateCustomer() {
+	public CreateCustomer(JFrame j) {
+		this.j = j;
 		initComponents();
 	}
 
 	private void initComponents() {
+		CreateCustomerListener e = new CreateCustomerListener(this, j);
 		// JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
 		// Generated using JFormDesigner Evaluation license - Hugo Muller
 		label1 = new JLabel();
@@ -105,6 +108,7 @@ public class CreateCustomer extends JPanel {
 			//---- button1 ----
 			button1.setText("Create");
 			button1.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			button1.addActionListener(e);
 			panel2.add(button1, new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0,
 				GridBagConstraints.CENTER, GridBagConstraints.BOTH,
 				new Insets(0, 0, 5, 5), 0, 0));
@@ -112,6 +116,7 @@ public class CreateCustomer extends JPanel {
 			//---- button2 ----
 			button2.setText("Cancel");
 			button2.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			button2.addActionListener(e);
 			panel2.add(button2, new GridBagConstraints(2, 1, 1, 1, 0.0, 0.0,
 				GridBagConstraints.CENTER, GridBagConstraints.BOTH,
 				new Insets(0, 0, 5, 5), 0, 0));
@@ -133,5 +138,29 @@ public class CreateCustomer extends JPanel {
 	private JPanel panel2;
 	private JButton button1;
 	private JButton button2;
+	private JFrame j;
 	// JFormDesigner - End of variables declaration  //GEN-END:variables
+	
+	public JButton getButton1()
+	{
+		return button1;
+	}
+	
+	public JButton getButton2()
+	{
+		return button2;
+	}
+	
+	public JTextField getField1()
+	{
+		return textField1;
+	}
+	
+	public JTextField getField2()
+	{
+		return textField2;
+	}
+	
+	
+	
 }

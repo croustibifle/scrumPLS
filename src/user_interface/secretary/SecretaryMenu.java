@@ -10,6 +10,7 @@ import java.awt.Insets;
  * Created by JFormDesigner on Wed May 17 15:25:15 CEST 2017
  */
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
@@ -19,7 +20,8 @@ import javax.swing.JPanel;
  * @author Hugo Muller
  */
 public class SecretaryMenu extends JPanel {
-	public SecretaryMenu() {
+	public SecretaryMenu(JFrame j) {
+		this.j = j;
 		initComponents();
 	}
 
@@ -107,5 +109,6 @@ public class SecretaryMenu extends JPanel {
 	private JButton button2;
 	private JButton button3;
 	private JButton button4;
+	JFrame j;
 	// JFormDesigner - End of variables declaration  //GEN-END:variables
 }
