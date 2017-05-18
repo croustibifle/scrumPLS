@@ -1,6 +1,6 @@
 package controllers;
 
-import core.ScrapieTest;
+import core.SexingTest;
 import core.Specie;
 import core.SpecieCategory;
 import user_interface.validator.SexingTestMenu;
@@ -28,17 +28,22 @@ public class SexingTestController {
 		return app;
 	}
 
-	public void submitForm(String name, int pos, int val) {
+	public void submitForm(String name, int posF, int posM, int valF, int valM) {
 	    for (SpecieCategory c: app.getDatas().getCatList().getListe()) {
 	        for (Specie s : c.getSpecies()){
 	        	if (s.getName().equals(name)){
-	        		new ScrapieTest(s,pos,val);
+	        		new SexingTest(s, posM, valM, posF, valF);
 	        		view.validate();
 	        		app.validatorMenu();
 	        		break;
 	        	}
 	        }
 	    }
+	}
+
+	public void submitPosVal(int posF, int posM, int valF, int valM) {
+		if (posF <= 0 || valF <= 0 || posM <= 0 || valM <= 0)
+			view.error();
 	}
 
 }

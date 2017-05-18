@@ -5,7 +5,9 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.util.ArrayList;
 
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -17,6 +19,8 @@ import javax.swing.JTextField;
  */
 
 import controllers.SexingTestController;
+import core.Specie;
+import core.SpecieCategory;
 
 
 
@@ -47,19 +51,26 @@ public class SexingTestMenu extends JPanel {
 	private SexingTestController controller;
 	
 	public SexingTestMenu(SexingTestController c) {
-		initComponents();
 		controller = c;
+		initComponents();
 		addListener();
 	}
 
 	private void initComponents() {
-		// JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
-		// Generated using JFormDesigner Evaluation license - Hugo Muller
+
+		ArrayList<String> ls = new ArrayList<String>(); 
+	    for (SpecieCategory c: controller.getApp().getDatas().getCatList().getListe()) {
+	        for (Specie s : c.getSpecies()){
+	        	ls.add(s.getName());
+	        }
+	    }
+	    
 		label1 = new JLabel();
 		panel2 = new JPanel();
 		panel3 = new JPanel();
 		label2 = new JLabel();
 		comboBox1 = new JComboBox();
+		comboBox1.setModel(new DefaultComboBoxModel(ls.toArray()));
 		panel4 = new JPanel();
 		label7 = new JLabel();
 		label8 = new JLabel();
@@ -197,8 +208,8 @@ public class SexingTestMenu extends JPanel {
 		{
 			panel1.setBackground(new Color(102, 102, 255));
 			panel1.setLayout(new GridBagLayout());
-			((GridBagLayout)panel1.getLayout()).columnWidths = new int[] {131, 203, 71, 219, 0};
-			((GridBagLayout)panel1.getLayout()).rowHeights = new int[] {63, 0};
+			((GridBagLayout)panel1.getLayout()).columnWidths = new int[] {106, 203, 71, 219, 0};
+			((GridBagLayout)panel1.getLayout()).rowHeights = new int[] {12, 0};
 			((GridBagLayout)panel1.getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 0.0, 1.0E-4};
 			((GridBagLayout)panel1.getLayout()).rowWeights = new double[] {0.0, 1.0E-4};
 
@@ -225,6 +236,10 @@ public class SexingTestMenu extends JPanel {
 	private void addListener() {
 		button1.addActionListener(
 				ae ->{
+					  Integer b = 1;
+					  controller.submitPosVal(Integer.parseInt(textField1.getText()), Integer.parseInt(textField2.getText()), Integer.parseInt(textField3.getText()), Integer.parseInt(textField4.getText()));
+					  if (b == 1)
+					  controller.submitForm(comboBox1.getSelectedItem().toString(), Integer.parseInt(textField1.getText()), Integer.parseInt(textField2.getText()), Integer.parseInt(textField3.getText()), Integer.parseInt(textField4.getText()));
 					  });
 		button2.addActionListener(
 				ae ->{
