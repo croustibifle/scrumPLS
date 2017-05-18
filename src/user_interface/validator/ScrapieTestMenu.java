@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -78,9 +77,8 @@ public class ScrapieTestMenu extends JPanel {
 		// JFormDesigner evaluation mark
 		setBorder(new javax.swing.border.CompoundBorder(
 			new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
-				"JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
-				javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
-				java.awt.Color.red), getBorder())); addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
+				"           ", javax.swing.border.TitledBorder.CENTER,
+				javax.swing.border.TitledBorder.BOTTOM), getBorder())); addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
 
 		setLayout(new GridBagLayout());
 		((GridBagLayout)getLayout()).columnWidths = new int[] {0, 607, 0, 0};
@@ -139,7 +137,7 @@ public class ScrapieTestMenu extends JPanel {
 
 		//======== panel2 ========
 		{
-			panel2.setBackground(new Color(204, 0, 204));
+			panel2.setBackground(new Color(102, 0, 102));
 			panel2.setLayout(new GridBagLayout());
 			((GridBagLayout)panel2.getLayout()).columnWidths = new int[] {68, 238, 244, 51, 0};
 			((GridBagLayout)panel2.getLayout()).rowHeights = new int[] {78, 0};
