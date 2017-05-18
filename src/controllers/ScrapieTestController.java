@@ -40,4 +40,9 @@ public class ScrapieTestController {
 	        }
 	    }
 	}
+	
+	public void submitPosVal(int pos, int val) {
+		if (pos <= 0 || val <= 0)
+			view.error();
+	}
 }

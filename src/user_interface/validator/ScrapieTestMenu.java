@@ -42,6 +42,7 @@ public class ScrapieTestMenu extends JPanel {
 	private JButton button1;
 	private JButton button2;
 	private ScrapieTestController controller;
+	private int b;
 	
 	public ScrapieTestMenu(ScrapieTestController c) {
 		controller = c;
@@ -168,6 +169,9 @@ public class ScrapieTestMenu extends JPanel {
 	private void addListener() {
 		button1.addActionListener(
 				ae ->{
+					  b = 1;
+					  controller.submitPosVal(Integer.parseInt(textField1.getText()), Integer.parseInt(textField2.getText()));
+					  if (b == 1)
 					  controller.submitForm(comboBox1.getSelectedItem().toString(), Integer.parseInt(textField1.getText()), Integer.parseInt(textField2.getText()));
 					  });
 		button2.addActionListener(
@@ -177,7 +181,12 @@ public class ScrapieTestMenu extends JPanel {
 	}
 	
 	public void validate() {
-		JOptionPane.showMessageDialog(this, "The scrapie test has been created", "Validation", JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(this, "The scrapie test has been created.", "Validation", JOptionPane.INFORMATION_MESSAGE);		
+	}
+	
+	public void error() {
+		JOptionPane.showMessageDialog(this, "Please enter a positive integer for position and value.", "Error", JOptionPane.INFORMATION_MESSAGE);
+		b = 0;
 	}
 	
 }
