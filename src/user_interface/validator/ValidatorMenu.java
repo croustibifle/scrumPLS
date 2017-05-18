@@ -72,7 +72,7 @@ public class ValidatorMenu extends JPanel {
 			new Insets(0, 0, 5, 5), 0, 0));
 
 		//---- button1 ----
-		button1.setText("D\u00e9connexion");
+		button1.setText("Log out");
 		add(button1, new GridBagConstraints(3, 0, 1, 1, 0.0, 0.0,
 			GridBagConstraints.EAST, GridBagConstraints.NONE,
 			new Insets(0, 0, 5, 5), 0, 0));
