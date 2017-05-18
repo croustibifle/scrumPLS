@@ -142,11 +142,9 @@ public class CreateCategory extends JPanel {
 	
 	public void error() {
 		JOptionPane.showMessageDialog(this, "The category already exists", "Error", JOptionPane.ERROR_MESSAGE);
-		
 	}
 	
 	public void validate() {
 		JOptionPane.showMessageDialog(this, "The category has been created", "Validation", JOptionPane.INFORMATION_MESSAGE);
-		
 	}
 }

@@ -23,10 +23,13 @@ public class CreateCustomerController {
 	}
 
 	public void submitForm(String clientName, String city) {
-		if (app.getDatas().getCustList().addCustomer(clientName, city))
+		if (app.getDatas().getCustList().addCustomer(clientName, city)){
 			app.secretaryMenu();
-		else
+			view.validate();
+		}
+		else{
 			view.error();
+		}
 	}
 
 }

@@ -147,4 +147,8 @@ public class CreateCustomer extends JPanel {
 	public void error(){
 		JOptionPane.showMessageDialog(this, "The customer already exists", "Error", JOptionPane.ERROR_MESSAGE);
 	}
+	
+	public void validate() {
+		JOptionPane.showMessageDialog(this, "The customer has been created", "Validation", JOptionPane.INFORMATION_MESSAGE);
+	}
 }

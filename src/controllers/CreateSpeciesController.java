@@ -21,10 +21,13 @@ public class CreateSpeciesController {
 	}
 
 	public void submitForm(String specieName, String catName) {
-		if (app.getDatas().getCatList().addSpecie(specieName, catName))
+		if (app.getDatas().getCatList().addSpecie(specieName, catName)){
 			app.secretaryMenu();
-		else
+			view.validate();
+		}
+		else{
 			view.error();
+		}
 	}
 	
 	public AppController getApp(){
