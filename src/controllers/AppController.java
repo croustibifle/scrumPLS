@@ -45,6 +45,13 @@ public class AppController {
 		frame.validate();
 	}
 	
+	public void sexingTest() {
+		SexingTestController c = new SexingTestController(this);
+		frame.getContentPane().removeAll();
+		frame.add(c.getView());
+		frame.validate();
+	}
+	
 	public void secretaryMenu() {
 		SecretaryMenuController c = new SecretaryMenuController(this);
 		frame.getContentPane().removeAll();

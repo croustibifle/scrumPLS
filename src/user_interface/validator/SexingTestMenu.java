@@ -15,14 +15,39 @@ import javax.swing.JTextField;
  * Created by JFormDesigner on Thu May 18 15:12:55 CEST 2017
  */
 
+import controllers.SexingTestController;
+
 
 
 /**
  * @author Hugo Muller
  */
 public class SexingTestMenu extends JPanel {
-	public SexingTestMenu() {
+	
+	private JLabel label1;
+	private JPanel panel2;
+	private JPanel panel3;
+	private JLabel label2;
+	private JComboBox comboBox1;
+	private JPanel panel4;
+	private JLabel label7;
+	private JLabel label8;
+	private JLabel label3;
+	private JTextField textField1;
+	private JLabel label5;
+	private JTextField textField3;
+	private JLabel label4;
+	private JTextField textField2;
+	private JLabel label6;
+	private JTextField textField4;
+	private JPanel panel1;
+	private JButton button1;
+	private JButton button2;
+	private SexingTestController controller;
+	
+	public SexingTestMenu(SexingTestController c) {
 		initComponents();
+		controller = c;
 	}
 
 	private void initComponents() {
@@ -201,27 +226,4 @@ public class SexingTestMenu extends JPanel {
 			new Insets(0, 0, 0, 5), 0, 0));
 		// JFormDesigner - End of component initialization  //GEN-END:initComponents
 	}
-
-	// JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-	// Generated using JFormDesigner Evaluation license - Hugo Muller
-	private JLabel label1;
-	private JPanel panel2;
-	private JPanel panel3;
-	private JLabel label2;
-	private JComboBox comboBox1;
-	private JPanel panel4;
-	private JLabel label7;
-	private JLabel label8;
-	private JLabel label3;
-	private JTextField textField1;
-	private JLabel label5;
-	private JTextField textField3;
-	private JLabel label4;
-	private JTextField textField2;
-	private JLabel label6;
-	private JTextField textField4;
-	private JPanel panel1;
-	private JButton button1;
-	private JButton button2;
-	// JFormDesigner - End of variables declaration  //GEN-END:variables
 }
