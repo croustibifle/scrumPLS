@@ -54,7 +54,7 @@ public class ValidatorMenu extends JPanel {
 		setBackground(new Color(102, 0, 102));
 
 		setLayout(new GridBagLayout());
-		((GridBagLayout)getLayout()).columnWidths = new int[] {0, 236, 264, 256, 17, 0};
+		((GridBagLayout)getLayout()).columnWidths = new int[] {20, 236, 264, 256, 17, 0};
 		((GridBagLayout)getLayout()).rowHeights = new int[] {133, 255, 114, 0};
 		((GridBagLayout)getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 1.0E-4};
 		((GridBagLayout)getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 1.0E-4};

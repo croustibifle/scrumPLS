@@ -107,6 +107,7 @@ public class ExploreOrder extends JPanel{
 					label2.setText("Order :");
 					label2.setFont(label2.getFont().deriveFont(label2.getFont().getSize() + 6f));
 					label2.setForeground(Color.white);
+					label2.setVisible(false);
 					panel1.add(label2, new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0,
 						GridBagConstraints.CENTER, GridBagConstraints.BOTH,
 						new Insets(0, 0, 5, 5), 0, 0));
@@ -122,6 +123,7 @@ public class ExploreOrder extends JPanel{
 					label3.setText("Customer :");
 					label3.setFont(label3.getFont().deriveFont(label3.getFont().getSize() + 6f));
 					label3.setForeground(Color.white);
+					label3.setVisible(false);
 					panel1.add(label3, new GridBagConstraints(1, 2, 1, 1, 0.0, 0.0,
 						GridBagConstraints.CENTER, GridBagConstraints.BOTH,
 						new Insets(0, 0, 5, 5), 0, 0));
@@ -137,6 +139,7 @@ public class ExploreOrder extends JPanel{
 					label4.setText("Category :");
 					label4.setFont(label4.getFont().deriveFont(label4.getFont().getSize() + 6f));
 					label4.setForeground(Color.white);
+					label4.setVisible(false);
 					panel1.add(label4, new GridBagConstraints(1, 3, 1, 1, 0.0, 0.0,
 						GridBagConstraints.CENTER, GridBagConstraints.BOTH,
 						new Insets(0, 0, 5, 5), 0, 0));
@@ -152,6 +155,7 @@ public class ExploreOrder extends JPanel{
 					label5.setText("Specie :");
 					label5.setFont(label5.getFont().deriveFont(label5.getFont().getSize() + 6f));
 					label5.setForeground(Color.white);
+					label5.setVisible(false);
 					panel1.add(label5, new GridBagConstraints(1, 4, 1, 1, 0.0, 0.0,
 						GridBagConstraints.CENTER, GridBagConstraints.BOTH,
 						new Insets(0, 0, 5, 5), 0, 0));
@@ -167,6 +171,7 @@ public class ExploreOrder extends JPanel{
 					label9.setText("Number of samples :");
 					label9.setFont(label9.getFont().deriveFont(label9.getFont().getSize() + 6f));
 					label9.setForeground(Color.white);
+					label9.setVisible(false);
 					panel1.add(label9, new GridBagConstraints(1, 5, 1, 1, 0.0, 0.0,
 						GridBagConstraints.CENTER, GridBagConstraints.BOTH,
 						new Insets(0, 0, 5, 5), 0, 0));
@@ -182,6 +187,7 @@ public class ExploreOrder extends JPanel{
 					label8.setText("Status :");
 					label8.setFont(label8.getFont().deriveFont(label8.getFont().getSize() + 6f));
 					label8.setForeground(Color.white);
+					label8.setVisible(false);
 					panel1.add(label8, new GridBagConstraints(1, 6, 1, 1, 0.0, 0.0,
 						GridBagConstraints.CENTER, GridBagConstraints.BOTH,
 						new Insets(0, 0, 5, 5), 0, 0));
@@ -197,6 +203,7 @@ public class ExploreOrder extends JPanel{
 					label10.setText("% of samples analyzed :");
 					label10.setFont(label10.getFont().deriveFont(label10.getFont().getSize() + 6f));
 					label10.setForeground(Color.white);
+					label10.setVisible(false);
 					panel1.add(label10, new GridBagConstraints(1, 7, 1, 1, 0.0, 0.0,
 						GridBagConstraints.CENTER, GridBagConstraints.BOTH,
 						new Insets(0, 0, 5, 5), 0, 0));
@@ -209,7 +216,7 @@ public class ExploreOrder extends JPanel{
 						new Insets(0, 0, 5, 5), 0, 0));
 
 					//---- button1 ----
-					button1.setText("Menu");
+					button1.setText("Return to Menu");
 					button1.setFont(button1.getFont().deriveFont(button1.getFont().getSize() + 3f));
 					panel1.add(button1, new GridBagConstraints(2, 9, 3, 1, 0.0, 0.0,
 						GridBagConstraints.CENTER, GridBagConstraints.BOTH,
