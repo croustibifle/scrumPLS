@@ -9,6 +9,7 @@ import java.awt.Insets;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 /*
@@ -48,6 +49,7 @@ public class SexingTestMenu extends JPanel {
 	public SexingTestMenu(SexingTestController c) {
 		initComponents();
 		controller = c;
+		addListener();
 	}
 
 	private void initComponents() {
@@ -218,5 +220,24 @@ public class SexingTestMenu extends JPanel {
 			GridBagConstraints.CENTER, GridBagConstraints.BOTH,
 			new Insets(0, 0, 0, 5), 0, 0));
 		// JFormDesigner - End of component initialization  //GEN-END:initComponents
+	}
+	
+	private void addListener() {
+		button1.addActionListener(
+				ae ->{
+					  });
+		button2.addActionListener(
+				ae ->{
+					  controller.goBack();
+					  });
+	}
+	
+	public void validate() {
+		JOptionPane.showMessageDialog(this, "The scrapie test has been created.", "Validation", JOptionPane.INFORMATION_MESSAGE);		
+	}
+	
+	public void error() {
+		JOptionPane.showMessageDialog(this, "Please enter a positive integer for position and value.", "Error", JOptionPane.INFORMATION_MESSAGE);
+		//b = 0;
 	}
 }
