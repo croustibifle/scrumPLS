@@ -33,7 +33,7 @@ public class CreateCategory extends JPanel {
 		button2 = new JButton();
 
 		//======== this ========
-		setBackground(new Color(102, 0, 102));
+		setBackground(new Color(102, 102, 255));
 
 		
 		setLayout(new GridBagLayout());
@@ -52,7 +52,7 @@ public class CreateCategory extends JPanel {
 
 		//======== panel1 ========
 		{
-			panel1.setBackground(new Color(102, 0, 102));
+			panel1.setBackground(new Color(102, 102, 255));
 			panel1.setLayout(new GridBagLayout());
 			((GridBagLayout)panel1.getLayout()).columnWidths = new int[] {601, 0};
 			((GridBagLayout)panel1.getLayout()).rowHeights = new int[] {235, 190, 0};
@@ -61,7 +61,7 @@ public class CreateCategory extends JPanel {
 
 			//======== panel2 ========
 			{
-				panel2.setBackground(new Color(102, 0, 102));
+				panel2.setBackground(new Color(102, 102, 255));
 				panel2.setLayout(new GridBagLayout());
 				((GridBagLayout)panel2.getLayout()).columnWidths = new int[] {55, 205, 205, 50, 0};
 				((GridBagLayout)panel2.getLayout()).rowHeights = new int[] {100, 0};
@@ -88,7 +88,7 @@ public class CreateCategory extends JPanel {
 
 			//======== panel3 ========
 			{
-				panel3.setBackground(new Color(102, 0, 102));
+				panel3.setBackground(new Color(102, 102, 255));
 				panel3.setLayout(new GridBagLayout());
 				((GridBagLayout)panel3.getLayout()).columnWidths = new int[] {55, 205, 205, 50, 0};
 				((GridBagLayout)panel3.getLayout()).rowHeights = new int[] {100, 0};

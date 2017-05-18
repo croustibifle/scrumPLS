@@ -68,8 +68,8 @@ public class ExploreOrder extends JPanel{
 		
 
 		//======== this ========
-				setBackground(new Color(102, 0, 102));
-				panel1.setBackground(new Color(102, 0, 102));
+				setBackground(new Color(102, 102, 255));
+				panel1.setBackground(new Color(102, 102, 255));
 				setPreferredSize(new Dimension(800, 600));
 
 				setLayout(new GridBagLayout());

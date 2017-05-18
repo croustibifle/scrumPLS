@@ -49,7 +49,7 @@ public class SecretaryMenu extends JPanel {
 		button5 = new JButton();
 
 		//======== this ========
-		setBackground(new Color(102, 0, 102));
+		setBackground(new Color(102, 102, 255));
 
 		setLayout(new GridBagLayout());
 		((GridBagLayout)getLayout()).columnWidths = new int[] {95, 578, 21, 0};
@@ -67,7 +67,7 @@ public class SecretaryMenu extends JPanel {
 
 		//======== panel1 ========
 		{
-			panel1.setBackground(new Color(102, 0, 102));
+			panel1.setBackground(new Color(102, 102, 255));
 			panel1.setLayout(new GridBagLayout());
 			((GridBagLayout)panel1.getLayout()).columnWidths = new int[] {291, 279, 0};
 			((GridBagLayout)panel1.getLayout()).rowHeights = new int[] {137, 132, 0};

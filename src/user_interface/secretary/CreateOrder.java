@@ -85,10 +85,10 @@ public class CreateOrder extends JPanel {
 		button2 = new JButton();
 
 		//======== this ========
-		setBackground(new Color(102, 0, 102));
+		setBackground(new Color(102, 102, 255));
 
 		setLayout(new GridBagLayout());
-		((GridBagLayout)getLayout()).columnWidths = new int[] {21, 576, 0, 0};
+		((GridBagLayout)getLayout()).columnWidths = new int[] {95, 576, 0, 0};
 		((GridBagLayout)getLayout()).rowHeights = new int[] {80, 293, 81, 0};
 		((GridBagLayout)getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 1.0E-4};
 		((GridBagLayout)getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 1.0E-4};
@@ -183,7 +183,7 @@ public class CreateOrder extends JPanel {
 
 		//======== panel1 ========
 		{
-			panel1.setBackground(new Color(102, 0, 102));
+			panel1.setBackground(new Color(102, 102, 255));
 			panel1.setLayout(new GridBagLayout());
 			((GridBagLayout)panel1.getLayout()).columnWidths = new int[] {98, 188, 174, 0};
 			((GridBagLayout)panel1.getLayout()).rowHeights = new int[] {79, 0};

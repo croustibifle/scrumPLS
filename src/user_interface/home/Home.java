@@ -38,7 +38,7 @@ public class Home extends JPanel{
 		passwordField = new JPasswordField ();
 		button1 = new JButton();
 
-		setBackground(new Color(102, 0, 102));
+		setBackground(new Color(102, 102, 255));
 		
 		setLayout(new GridBagLayout());
 		((GridBagLayout)getLayout()).columnWidths = new int[] {30, 58, 94, 73, 77, 0, 76, 106, 56, 70, 0, 0};

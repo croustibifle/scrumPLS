@@ -51,7 +51,7 @@ public class ValidatorMenu extends JPanel {
 		button3 = new JButton();
 
 		//======== this ========
-		setBackground(new Color(102, 0, 102));
+		setBackground(new Color(102, 102, 255));
 
 		setLayout(new GridBagLayout());
 		((GridBagLayout)getLayout()).columnWidths = new int[] {20, 236, 264, 256, 17, 0};

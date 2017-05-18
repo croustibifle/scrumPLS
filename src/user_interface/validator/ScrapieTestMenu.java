@@ -72,7 +72,7 @@ public class ScrapieTestMenu extends JPanel {
 		button2 = new JButton();
 
 		//======== this ========
-		setBackground(new Color(102, 0, 102));
+		setBackground(new Color(102, 102, 255));
 
 		// JFormDesigner evaluation mark
 		setBorder(new javax.swing.border.CompoundBorder(
@@ -138,7 +138,7 @@ public class ScrapieTestMenu extends JPanel {
 
 		//======== panel2 ========
 		{
-			panel2.setBackground(new Color(102, 0, 102));
+			panel2.setBackground(new Color(102, 102, 255));
 			panel2.setLayout(new GridBagLayout());
 			((GridBagLayout)panel2.getLayout()).columnWidths = new int[] {68, 238, 244, 51, 0};
 			((GridBagLayout)panel2.getLayout()).rowHeights = new int[] {78, 0};
