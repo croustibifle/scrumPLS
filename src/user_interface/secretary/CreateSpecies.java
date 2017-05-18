@@ -68,7 +68,7 @@ public class CreateSpecies extends JPanel {
 		{
 			panel1.setBackground(new Color(102, 102, 255));
 			panel1.setLayout(new GridBagLayout());
-			((GridBagLayout)panel1.getLayout()).columnWidths = new int[] {600, 0};
+			((GridBagLayout)panel1.getLayout()).columnWidths = new int[] {840, 0};
 			((GridBagLayout)panel1.getLayout()).rowHeights = new int[] {105, 345, 0};
 			((GridBagLayout)panel1.getLayout()).columnWeights = new double[] {0.0, 1.0E-4};
 			((GridBagLayout)panel1.getLayout()).rowWeights = new double[] {0.0, 0.0, 1.0E-4};
@@ -94,7 +94,7 @@ public class CreateSpecies extends JPanel {
 				{
 					panel3.setBackground(new Color(102, 102, 255));
 					panel3.setLayout(new GridBagLayout());
-					((GridBagLayout)panel3.getLayout()).columnWidths = new int[] {135, 249, 244, 50, 0};
+					((GridBagLayout)panel3.getLayout()).columnWidths = new int[] {125, 249, 244, 50, 0};
 					((GridBagLayout)panel3.getLayout()).rowHeights = new int[] {110, 105, 0};
 					((GridBagLayout)panel3.getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 0.0, 1.0E-4};
 					((GridBagLayout)panel3.getLayout()).rowWeights = new double[] {0.0, 0.0, 1.0E-4};
