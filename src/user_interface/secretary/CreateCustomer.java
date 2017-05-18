@@ -58,7 +58,7 @@ public class CreateCustomer extends JPanel {
 
 		//======== this ========
 		setForeground(Color.white);
-		setBackground(new Color(204, 0, 204));
+		setBackground(new Color(102, 0, 102));
 
 		setLayout(new GridBagLayout());
 		((GridBagLayout)getLayout()).columnWidths = new int[] {20, 624, 0, 0};
@@ -69,6 +69,7 @@ public class CreateCustomer extends JPanel {
 		//---- label1 ----
 		label1.setText("CREATING CUSTOMER");
 		label1.setFont(new Font("Tahoma", Font.PLAIN, 24));
+		label1.setForeground(Color.WHITE);
 		add(label1, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
 			GridBagConstraints.CENTER, GridBagConstraints.NONE,
 			new Insets(0, 0, 5, 5), 0, 0));
@@ -107,7 +108,7 @@ public class CreateCustomer extends JPanel {
 
 		//======== panel2 ========
 		{
-			panel2.setBackground(new Color(204, 0, 204));
+			panel2.setBackground(new Color(102, 0, 102));
 			panel2.setLayout(new GridBagLayout());
 			((GridBagLayout)panel2.getLayout()).columnWidths = new int[] {80, 206, 206, 121, 0};
 			((GridBagLayout)panel2.getLayout()).rowHeights = new int[] {46, 52, 46, 0};

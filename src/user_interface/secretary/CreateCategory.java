@@ -33,7 +33,7 @@ public class CreateCategory extends JPanel {
 		button2 = new JButton();
 
 		//======== this ========
-		setBackground(new Color(204, 0, 204));
+		setBackground(new Color(102, 0, 102));
 
 		
 		setLayout(new GridBagLayout());
@@ -45,13 +45,14 @@ public class CreateCategory extends JPanel {
 		//---- label1 ----
 		label1.setText("CREATING CATEGORY");
 		label1.setFont(label1.getFont().deriveFont(label1.getFont().getSize() + 15f));
+		label1.setForeground(Color.WHITE);
 		add(label1, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
 			GridBagConstraints.CENTER, GridBagConstraints.VERTICAL,
 			new Insets(0, 0, 5, 0), 0, 0));
 
 		//======== panel1 ========
 		{
-			panel1.setBackground(new Color(204, 0, 204));
+			panel1.setBackground(new Color(102, 0, 102));
 			panel1.setLayout(new GridBagLayout());
 			((GridBagLayout)panel1.getLayout()).columnWidths = new int[] {601, 0};
 			((GridBagLayout)panel1.getLayout()).rowHeights = new int[] {235, 190, 0};
@@ -60,7 +61,7 @@ public class CreateCategory extends JPanel {
 
 			//======== panel2 ========
 			{
-				panel2.setBackground(new Color(204, 0, 204));
+				panel2.setBackground(new Color(102, 0, 102));
 				panel2.setLayout(new GridBagLayout());
 				((GridBagLayout)panel2.getLayout()).columnWidths = new int[] {55, 205, 205, 50, 0};
 				((GridBagLayout)panel2.getLayout()).rowHeights = new int[] {100, 0};
@@ -68,8 +69,9 @@ public class CreateCategory extends JPanel {
 				((GridBagLayout)panel2.getLayout()).rowWeights = new double[] {0.0, 1.0E-4};
 
 				//---- label2 ----
-				label2.setText("Name category:");
+				label2.setText("Category Name :");
 				label2.setFont(label2.getFont().deriveFont(label2.getFont().getSize() + 5f));
+				label2.setForeground(Color.WHITE);
 				panel2.add(label2, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
 					GridBagConstraints.CENTER, GridBagConstraints.VERTICAL,
 					new Insets(0, 0, 0, 5), 0, 0));
@@ -86,7 +88,7 @@ public class CreateCategory extends JPanel {
 
 			//======== panel3 ========
 			{
-				panel3.setBackground(new Color(204, 0, 204));
+				panel3.setBackground(new Color(102, 0, 102));
 				panel3.setLayout(new GridBagLayout());
 				((GridBagLayout)panel3.getLayout()).columnWidths = new int[] {55, 205, 205, 50, 0};
 				((GridBagLayout)panel3.getLayout()).rowHeights = new int[] {100, 0};

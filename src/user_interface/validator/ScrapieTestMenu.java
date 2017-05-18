@@ -89,6 +89,7 @@ public class ScrapieTestMenu extends JPanel {
 		//---- label4 ----
 		label4.setText("Creating Scrapie Test");
 		label4.setFont(new Font("Tahoma", Font.PLAIN, 26));
+		label4.setForeground(Color.WHITE);
 		add(label4, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
 			GridBagConstraints.CENTER, GridBagConstraints.VERTICAL,
 			new Insets(0, 0, 5, 5), 0, 0));

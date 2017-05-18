@@ -53,18 +53,6 @@ public class ValidatorMenu extends JPanel {
 		//======== this ========
 		setBackground(new Color(102, 0, 102));
 
-		// JFormDesigner evaluation mark
-		setBorder(new javax.swing.border.CompoundBorder(
-			new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
-				"                  ", javax.swing.border.TitledBorder.CENTER,
-				javax.swing.border.TitledBorder.BOTTOM), getBorder())); 
-		addPropertyChangeListener(new java.beans.PropertyChangeListener(){
-			public void propertyChange(java.beans.PropertyChangeEvent e){
-				if("border".equals(e.getPropertyName()))
-					throw new RuntimeException();
-				}
-			});
-
 		setLayout(new GridBagLayout());
 		((GridBagLayout)getLayout()).columnWidths = new int[] {0, 236, 264, 256, 17, 0};
 		((GridBagLayout)getLayout()).rowHeights = new int[] {133, 255, 114, 0};

@@ -56,7 +56,7 @@ public class CreateSpecies extends JPanel {
 		button2 = new JButton();
 
 		//======== this ========
-		setBackground(new Color(204, 0, 204));
+		setBackground(new Color(102, 0, 102));
 
 		setLayout(new GridBagLayout());
 		((GridBagLayout)getLayout()).columnWidths = new int[] {600, 0};
@@ -66,7 +66,7 @@ public class CreateSpecies extends JPanel {
 
 		//======== panel1 ========
 		{
-			panel1.setBackground(new Color(204, 0, 204));
+			panel1.setBackground(new Color(102, 0, 102));
 			panel1.setLayout(new GridBagLayout());
 			((GridBagLayout)panel1.getLayout()).columnWidths = new int[] {600, 0};
 			((GridBagLayout)panel1.getLayout()).rowHeights = new int[] {105, 345, 0};
@@ -76,13 +76,14 @@ public class CreateSpecies extends JPanel {
 			//---- label1 ----
 			label1.setText("CREATING SPECIES");
 			label1.setFont(label1.getFont().deriveFont(label1.getFont().getSize() + 15f));
+			label1.setForeground(Color.WHITE);
 			panel1.add(label1, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
 				GridBagConstraints.CENTER, GridBagConstraints.VERTICAL,
 				new Insets(0, 0, 5, 0), 0, 0));
 
 			//======== panel2 ========
 			{
-				panel2.setBackground(new Color(204, 0, 204));
+				panel2.setBackground(new Color(102, 0, 102));
 				panel2.setLayout(new GridBagLayout());
 				((GridBagLayout)panel2.getLayout()).columnWidths = new int[] {600, 0};
 				((GridBagLayout)panel2.getLayout()).rowHeights = new int[] {225, 120, 0};
@@ -91,7 +92,7 @@ public class CreateSpecies extends JPanel {
 
 				//======== panel3 ========
 				{
-					panel3.setBackground(new Color(204, 0, 204));
+					panel3.setBackground(new Color(102, 0, 102));
 					panel3.setLayout(new GridBagLayout());
 					((GridBagLayout)panel3.getLayout()).columnWidths = new int[] {55, 249, 244, 50, 0};
 					((GridBagLayout)panel3.getLayout()).rowHeights = new int[] {110, 105, 0};
@@ -101,6 +102,7 @@ public class CreateSpecies extends JPanel {
 					//---- label2 ----
 					label2.setText("Specie name :");
 					label2.setFont(label2.getFont().deriveFont(label2.getFont().getSize() + 5f));
+					label2.setForeground(Color.WHITE);
 					panel3.add(label2, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
 						GridBagConstraints.CENTER, GridBagConstraints.VERTICAL,
 						new Insets(0, 0, 5, 5), 0, 0));
@@ -114,6 +116,7 @@ public class CreateSpecies extends JPanel {
 					//---- label3 ----
 					label3.setText("Specie category :");
 					label3.setFont(label3.getFont().deriveFont(label3.getFont().getSize() + 5f));
+					label3.setForeground(Color.WHITE);
 					panel3.add(label3, new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0,
 						GridBagConstraints.CENTER, GridBagConstraints.VERTICAL,
 						new Insets(0, 0, 0, 5), 0, 0));
@@ -130,7 +133,7 @@ public class CreateSpecies extends JPanel {
 
 				//======== panel4 ========
 				{
-					panel4.setBackground(new Color(204, 0, 204));
+					panel4.setBackground(new Color(102, 0, 102));
 					panel4.setLayout(new GridBagLayout());
 					((GridBagLayout)panel4.getLayout()).columnWidths = new int[] {55, 249, 245, 50, 0};
 					((GridBagLayout)panel4.getLayout()).rowHeights = new int[] {79, 0};
