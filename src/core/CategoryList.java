@@ -42,15 +42,17 @@ public class CategoryList {
 		boolean b = true;
 		for(SpecieCategory t : liste)
 		{
-			for(Specie t2 : t.getSpecies())
-			{
-				if(t2.getName().equals(theName))
+			if(t.getName().equals(theCateg)){
+				for(Specie t2 : t.getSpecies())
 				{
-					return false;
+					if(t2.getName().equals(theName))
+					{
+						return false;
+					}
 				}
-			}
 				t.addSpecie(new Specie(theName));
 				return true;
+		}
 		}
 //		if(b)
 //		{
