@@ -1,160 +1,131 @@
 package user_interface.secretary;
 
 import java.awt.*;
-import java.awt.BorderLayout;
-import java.awt.GridLayout;
-import java.awt.event.*;
+import javax.swing.*;
+/*
+ * Created by JFormDesigner on Thu May 18 09:25:28 CEST 2017
+ */
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-
-public class CreateCategory extends JPanel{ 
-	
-	// JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-		// Generated using JFormDesigner Evaluation license - Maxime Tanguy
-		private JPanel panel4;
-		private JLabel label2;
-		private JPanel panel5;
-		private JPanel panel6;
-		private JLabel label3;
-		private JTextField textField1;
-		private JPanel panel7;
-		private JButton button2;
-		private JButton button3;
-		// JFormDesigner - End of variables declaration  //GEN-END:variables
-		
-		
-	public CreateCategory(){
-		
-	    this.setLayout(new BorderLayout());
-	    
-	    JLabel title = new JLabel("CATEGORY CREATION",JLabel.NORTH);
-	    
-	    JPanel entryPanel = new JPanel();
-	    entryPanel.setLayout(new GridLayout(2,1));
-	    JLabel categoryLabel = new JLabel("Category : ");
-	    JTextField newCategory = new JTextField();
-	    
-	    entryPanel.add(categoryLabel);
-	    entryPanel.add(newCategory);
-	    
-	    JPanel buttonPanel = new JPanel();
-	    buttonPanel.setLayout(new GridLayout(2,1));
-	    JButton createButton = new JButton("Create");
-	    JButton cancelButton = new JButton("Cancel");
-	    
-	    buttonPanel.add(createButton);
-	    buttonPanel.add(cancelButton);
-	    
-	    this.add(title, BorderLayout.NORTH);
-	    this.add(buttonPanel, BorderLayout.SOUTH);
-	    this.add(entryPanel, BorderLayout.CENTER);
-		
-
-		this.setVisible(true);
+/**
+ * @author Maxime Tanguy
+ */
+public class CreateCategory extends JPanel {
+	public CreateCategory() {
+		initComponents();
 	}
 
 	private void initComponents() {
 		// JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
 		// Generated using JFormDesigner Evaluation license - Maxime Tanguy
-		panel4 = new JPanel();
+		label1 = new JLabel();
+		panel1 = new JPanel();
+		panel2 = new JPanel();
 		label2 = new JLabel();
-		panel5 = new JPanel();
-		panel6 = new JPanel();
-		label3 = new JLabel();
 		textField1 = new JTextField();
-		panel7 = new JPanel();
+		panel3 = new JPanel();
+		button1 = new JButton();
 		button2 = new JButton();
-		button3 = new JButton();
 
-		//======== panel4 ========
+		//======== this ========
+		setBackground(new Color(204, 0, 204));
+
+		// JFormDesigner evaluation mark
+		setBorder(new javax.swing.border.CompoundBorder(
+			new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
+				"JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
+				javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
+				java.awt.Color.red), getBorder())); addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
+
+		setLayout(new GridBagLayout());
+		((GridBagLayout)getLayout()).columnWidths = new int[] {600, 0};
+		((GridBagLayout)getLayout()).rowHeights = new int[] {75, 425, 0};
+		((GridBagLayout)getLayout()).columnWeights = new double[] {0.0, 1.0E-4};
+		((GridBagLayout)getLayout()).rowWeights = new double[] {0.0, 0.0, 1.0E-4};
+
+		//---- label1 ----
+		label1.setText("CREATING CATEGORY");
+		label1.setFont(label1.getFont().deriveFont(label1.getFont().getSize() + 15f));
+		add(label1, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
+			GridBagConstraints.CENTER, GridBagConstraints.VERTICAL,
+			new Insets(0, 0, 5, 0), 0, 0));
+
+		//======== panel1 ========
 		{
-			panel4.setBackground(new Color(204, 0, 204));
+			panel1.setBackground(new Color(204, 0, 204));
+			panel1.setLayout(new GridBagLayout());
+			((GridBagLayout)panel1.getLayout()).columnWidths = new int[] {601, 0};
+			((GridBagLayout)panel1.getLayout()).rowHeights = new int[] {235, 190, 0};
+			((GridBagLayout)panel1.getLayout()).columnWeights = new double[] {0.0, 1.0E-4};
+			((GridBagLayout)panel1.getLayout()).rowWeights = new double[] {0.0, 0.0, 1.0E-4};
 
-			panel4.setLayout(new GridBagLayout());
-			((GridBagLayout)panel4.getLayout()).columnWidths = new int[] {595, 0};
-			((GridBagLayout)panel4.getLayout()).rowHeights = new int[] {70, 382, 0};
-			((GridBagLayout)panel4.getLayout()).columnWeights = new double[] {0.0, 1.0E-4};
-			((GridBagLayout)panel4.getLayout()).rowWeights = new double[] {0.0, 0.0, 1.0E-4};
+			//======== panel2 ========
+			{
+				panel2.setBackground(new Color(204, 0, 204));
+				panel2.setLayout(new GridBagLayout());
+				((GridBagLayout)panel2.getLayout()).columnWidths = new int[] {55, 205, 205, 50, 0};
+				((GridBagLayout)panel2.getLayout()).rowHeights = new int[] {100, 0};
+				((GridBagLayout)panel2.getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 0.0, 1.0E-4};
+				((GridBagLayout)panel2.getLayout()).rowWeights = new double[] {0.0, 1.0E-4};
 
-			//---- label2 ----
-			label2.setText("CREATE CATEGORY");
-			label2.setFont(label2.getFont().deriveFont(label2.getFont().getSize() + 15f));
-			panel4.add(label2, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
-				GridBagConstraints.CENTER, GridBagConstraints.VERTICAL,
+				//---- label2 ----
+				label2.setText("Name category:");
+				label2.setFont(label2.getFont().deriveFont(label2.getFont().getSize() + 5f));
+				panel2.add(label2, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
+					GridBagConstraints.CENTER, GridBagConstraints.VERTICAL,
+					new Insets(0, 0, 0, 5), 0, 0));
+
+				//---- textField1 ----
+				textField1.setFont(textField1.getFont().deriveFont(textField1.getFont().getSize() + 5f));
+				panel2.add(textField1, new GridBagConstraints(2, 0, 1, 1, 0.0, 0.0,
+					GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL,
+					new Insets(0, 0, 0, 5), 0, 0));
+			}
+			panel1.add(panel2, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
+				GridBagConstraints.CENTER, GridBagConstraints.NONE,
 				new Insets(0, 0, 5, 0), 0, 0));
 
-			//======== panel5 ========
+			//======== panel3 ========
 			{
-				panel5.setBackground(new Color(204, 0, 204));
-				panel5.setLayout(new GridBagLayout());
-				((GridBagLayout)panel5.getLayout()).columnWidths = new int[] {596, 0};
-				((GridBagLayout)panel5.getLayout()).rowHeights = new int[] {184, 191, 0};
-				((GridBagLayout)panel5.getLayout()).columnWeights = new double[] {0.0, 1.0E-4};
-				((GridBagLayout)panel5.getLayout()).rowWeights = new double[] {0.0, 0.0, 1.0E-4};
+				panel3.setBackground(new Color(204, 0, 204));
+				panel3.setLayout(new GridBagLayout());
+				((GridBagLayout)panel3.getLayout()).columnWidths = new int[] {55, 205, 205, 50, 0};
+				((GridBagLayout)panel3.getLayout()).rowHeights = new int[] {100, 0};
+				((GridBagLayout)panel3.getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 0.0, 1.0E-4};
+				((GridBagLayout)panel3.getLayout()).rowWeights = new double[] {0.0, 1.0E-4};
 
-				//======== panel6 ========
-				{
-					panel6.setBackground(new Color(204, 0, 204));
-					panel6.setLayout(new GridBagLayout());
-					((GridBagLayout)panel6.getLayout()).columnWidths = new int[] {54, 235, 235, 50, 0};
-					((GridBagLayout)panel6.getLayout()).rowHeights = new int[] {108, 0};
-					((GridBagLayout)panel6.getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 0.0, 1.0E-4};
-					((GridBagLayout)panel6.getLayout()).rowWeights = new double[] {0.0, 1.0E-4};
+				//---- button1 ----
+				button1.setText("Create");
+				button1.setFont(button1.getFont().deriveFont(button1.getFont().getSize() + 5f));
+				panel3.add(button1, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
+					GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+					new Insets(0, 0, 0, 5), 0, 0));
 
-					//---- label3 ----
-					label3.setText("Name Category :");
-					label3.setFont(label3.getFont().deriveFont(label3.getFont().getSize() + 5f));
-					panel6.add(label3, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
-						GridBagConstraints.CENTER, GridBagConstraints.NONE,
-						new Insets(0, 0, 0, 5), 0, 0));
-
-					//---- textField1 ----
-					textField1.setFont(textField1.getFont().deriveFont(textField1.getFont().getSize() + 5f));
-					panel6.add(textField1, new GridBagConstraints(2, 0, 1, 1, 0.0, 0.0,
-						GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL,
-						new Insets(0, 0, 0, 5), 0, 0));
-				}
-				panel5.add(panel6, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
-					GridBagConstraints.CENTER, GridBagConstraints.NONE,
-					new Insets(0, 0, 5, 0), 0, 0));
-
-				//======== panel7 ========
-				{
-					panel7.setBackground(new Color(204, 0, 204));
-					panel7.setLayout(new GridBagLayout());
-					((GridBagLayout)panel7.getLayout()).columnWidths = new int[] {54, 224, 225, 50, 0};
-					((GridBagLayout)panel7.getLayout()).rowHeights = new int[] {112, 0};
-					((GridBagLayout)panel7.getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 0.0, 1.0E-4};
-					((GridBagLayout)panel7.getLayout()).rowWeights = new double[] {0.0, 1.0E-4};
-
-					//---- button2 ----
-					button2.setText("Create");
-					button2.setFont(button2.getFont().deriveFont(button2.getFont().getSize() + 5f));
-					panel7.add(button2, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
-						GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-						new Insets(0, 0, 0, 5), 0, 0));
-
-					//---- button3 ----
-					button3.setText("Cancel");
-					button3.setFont(button3.getFont().deriveFont(button3.getFont().getSize() + 5f));
-					panel7.add(button3, new GridBagConstraints(2, 0, 1, 1, 0.0, 0.0,
-						GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-						new Insets(0, 0, 0, 5), 0, 0));
-				}
-				panel5.add(panel7, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0,
-					GridBagConstraints.CENTER, GridBagConstraints.NONE,
-					new Insets(0, 0, 0, 0), 0, 0));
+				//---- button2 ----
+				button2.setText("Cancel");
+				button2.setFont(button2.getFont().deriveFont(button2.getFont().getSize() + 5f));
+				panel3.add(button2, new GridBagConstraints(2, 0, 1, 1, 0.0, 0.0,
+					GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+					new Insets(0, 0, 0, 5), 0, 0));
 			}
-			panel4.add(panel5, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0,
+			panel1.add(panel3, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0,
 				GridBagConstraints.CENTER, GridBagConstraints.NONE,
 				new Insets(0, 0, 0, 0), 0, 0));
 		}
+		add(panel1, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0,
+			GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+			new Insets(0, 0, 0, 0), 0, 0));
 		// JFormDesigner - End of component initialization  //GEN-END:initComponents
 	}
 
-	
+	// JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
+	// Generated using JFormDesigner Evaluation license - Maxime Tanguy
+	private JLabel label1;
+	private JPanel panel1;
+	private JPanel panel2;
+	private JLabel label2;
+	private JTextField textField1;
+	private JPanel panel3;
+	private JButton button1;
+	private JButton button2;
+	// JFormDesigner - End of variables declaration  //GEN-END:variables
 }
