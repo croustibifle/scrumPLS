@@ -23,4 +23,8 @@ public class ValidMenuController {
 	public void goOrderVizualisation() {
 		app.orderVizualisation();
 	}
+	
+	public void goBack(){
+		app.homePage();
+	}
 }

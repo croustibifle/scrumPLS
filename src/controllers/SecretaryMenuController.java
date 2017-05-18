@@ -32,4 +32,8 @@ public class SecretaryMenuController {
 		return view;
 	}
 	
+	public void goBack(){
+		app.homePage();
+	}
+	
 }
