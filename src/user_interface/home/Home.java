@@ -1,7 +1,16 @@
 package user_interface.home;
 
-import java.awt.*;
-import javax.swing.*;
+import java.awt.Color;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 
 import controllers.HomeController;
 
@@ -26,7 +35,7 @@ public class Home extends JPanel{
 		label1 = new JLabel();
 		loginField = new JTextField();
 		label2 = new JLabel();
-		passwordField = new JTextField();
+		passwordField = new JPasswordField ();
 		button1 = new JButton();
 
 		setLayout(new GridBagLayout());

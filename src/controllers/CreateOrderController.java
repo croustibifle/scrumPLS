@@ -20,5 +20,16 @@ public class CreateOrderController {
 	public CreateOrder getView() {
 		return view;
 	}
-
+	
+	public void goCreateCustomer() {
+		app.createCustomer();
+	}
+	
+	public void goCreateSpecies() {
+		app.createSpecies();
+	}
+	
+	public void goCreateCategory() {
+		app.createCategory();
+	}
 }
