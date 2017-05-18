@@ -32,4 +32,9 @@ public class CreateOrderController {
 	public void goCreateCategory() {
 		app.createCategory();
 	}
+	
+	public void submitSamplesNbr(int nbr) {
+		if (nbr <= 0)
+			view.error();
+	}
 }
