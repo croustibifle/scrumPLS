@@ -203,6 +203,18 @@ public class CreateOrder extends JPanel {
 				ae ->{
 					  controller.goBack();
 					  });
+		button3.addActionListener(
+				ae ->{
+					  controller.goCreateCustomer();
+					  });
+		button4.addActionListener(
+				ae ->{
+					  controller.goCreateCategory();
+					  });
+		button5.addActionListener(
+				ae ->{
+					  controller.goCreateSpecies();
+					  });
 	}
 
 }
