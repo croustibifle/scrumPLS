@@ -26,6 +26,7 @@ public class ValidatorMenu extends JPanel {
 	private JButton button1;
 	private JButton button2;
 	private JButton button3;
+	private JButton button4;
 	private JPanel panel2;
 	private JLabel label2;
 	private JLabel label3;
@@ -45,17 +46,25 @@ public class ValidatorMenu extends JPanel {
 		// JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
 		// Generated using JFormDesigner Evaluation license - Hugo Muller
 		label1 = new JLabel();
-		panel1 = new JPanel();
 		button1 = new JButton();
+		panel1 = new JPanel();
 		button2 = new JButton();
 		button3 = new JButton();
+		button4 = new JButton();
 
 		//======== this ========
-		setBackground(new Color(102, 102, 255));
+		setBackground(new Color(102, 0, 102));
+
+		// JFormDesigner evaluation mark
+		setBorder(new javax.swing.border.CompoundBorder(
+			new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
+				"JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
+				javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
+				java.awt.Color.red), getBorder())); addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
 
 		setLayout(new GridBagLayout());
-		((GridBagLayout)getLayout()).columnWidths = new int[] {20, 236, 264, 256, 17, 0};
-		((GridBagLayout)getLayout()).rowHeights = new int[] {133, 255, 114, 0};
+		((GridBagLayout)getLayout()).columnWidths = new int[] {0, 236, 264, 256, 17, 0};
+		((GridBagLayout)getLayout()).rowHeights = new int[] {133, 343, 64, 0};
 		((GridBagLayout)getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 1.0E-4};
 		((GridBagLayout)getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 1.0E-4};
 
@@ -67,20 +76,20 @@ public class ValidatorMenu extends JPanel {
 		add(label1, new GridBagConstraints(2, 0, 1, 1, 0.0, 0.0,
 			GridBagConstraints.CENTER, GridBagConstraints.NONE,
 			new Insets(0, 0, 5, 5), 0, 0));
-		
+
 		//---- button1 ----
-		button1.setText("Log out");
+		button1.setText("D\u00e9connexion");
 		add(button1, new GridBagConstraints(3, 0, 1, 1, 0.0, 0.0,
 			GridBagConstraints.EAST, GridBagConstraints.NONE,
 			new Insets(0, 0, 5, 5), 0, 0));
-		
+
 		//======== panel1 ========
 		{
 			panel1.setLayout(new GridBagLayout());
 			((GridBagLayout)panel1.getLayout()).columnWidths = new int[] {33, 302, 107, 276, 0};
-			((GridBagLayout)panel1.getLayout()).rowHeights = new int[] {248, 0};
+			((GridBagLayout)panel1.getLayout()).rowHeights = new int[] {219, 98, 0};
 			((GridBagLayout)panel1.getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 0.0, 1.0E-4};
-			((GridBagLayout)panel1.getLayout()).rowWeights = new double[] {0.0, 1.0E-4};
+			((GridBagLayout)panel1.getLayout()).rowWeights = new double[] {0.0, 0.0, 1.0E-4};
 
 			//---- button2 ----
 			button2.setText("   Visualize Order   ");
@@ -88,21 +97,30 @@ public class ValidatorMenu extends JPanel {
 			button2.setFont(new Font("Tahoma", Font.PLAIN, 16));
 			panel1.add(button2, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
 				GridBagConstraints.CENTER, GridBagConstraints.NONE,
-				new Insets(0, 0, 0, 5), 100, 80));
+				new Insets(0, 0, 5, 5), 100, 80));
 
 			//---- button3 ----
 			button3.setText("Create Scrapie Test");
 			button3.setFont(new Font("Tahoma", Font.PLAIN, 16));
 			panel1.add(button3, new GridBagConstraints(3, 0, 1, 1, 0.0, 0.0,
 				GridBagConstraints.CENTER, GridBagConstraints.NONE,
-				new Insets(0, 0, 0, 0), 100, 80));
+				new Insets(0, 0, 5, 0), 100, 80));
+
+			//---- button4 ----
+			button4.setText("Create Sexing Test");
+			button4.setFont(button4.getFont().deriveFont(button4.getFont().getSize() + 5f));
+			button4.setMinimumSize(new Dimension(300, 100));
+			button4.setMaximumSize(new Dimension(300, 100));
+			button4.setPreferredSize(new Dimension(250, 100));
+			panel1.add(button4, new GridBagConstraints(1, 1, 3, 1, 0.0, 0.0,
+				GridBagConstraints.CENTER, GridBagConstraints.VERTICAL,
+				new Insets(0, 0, 0, 0), 0, 0));
 		}
 		add(panel1, new GridBagConstraints(1, 1, 3, 1, 0.0, 0.0,
 			GridBagConstraints.CENTER, GridBagConstraints.BOTH,
 			new Insets(0, 0, 5, 5), 0, 0));
 		// JFormDesigner - End of component initialization  //GEN-END:initComponents
 	}
-
 	
 	private void addListener(){
 		button3.addActionListener(
