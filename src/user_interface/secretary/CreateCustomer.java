@@ -61,7 +61,7 @@ public class CreateCustomer extends JPanel {
 		setBackground(new Color(102, 102, 255));
 
 		setLayout(new GridBagLayout());
-		((GridBagLayout)getLayout()).columnWidths = new int[] {20, 624, 0, 0};
+		((GridBagLayout)getLayout()).columnWidths = new int[] {80, 624, 0, 0};
 		((GridBagLayout)getLayout()).rowHeights = new int[] {91, 241, 149, 0};
 		((GridBagLayout)getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 1.0E-4};
 		((GridBagLayout)getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 1.0E-4};

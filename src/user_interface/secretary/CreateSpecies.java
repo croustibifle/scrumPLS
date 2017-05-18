@@ -59,7 +59,7 @@ public class CreateSpecies extends JPanel {
 		setBackground(new Color(102, 102, 255));
 
 		setLayout(new GridBagLayout());
-		((GridBagLayout)getLayout()).columnWidths = new int[] {600, 0};
+		((GridBagLayout)getLayout()).columnWidths = new int[] {800, 0};
 		((GridBagLayout)getLayout()).rowHeights = new int[] {450, 0};
 		((GridBagLayout)getLayout()).columnWeights = new double[] {0.0, 1.0E-4};
 		((GridBagLayout)getLayout()).rowWeights = new double[] {0.0, 1.0E-4};
@@ -94,7 +94,7 @@ public class CreateSpecies extends JPanel {
 				{
 					panel3.setBackground(new Color(102, 102, 255));
 					panel3.setLayout(new GridBagLayout());
-					((GridBagLayout)panel3.getLayout()).columnWidths = new int[] {55, 249, 244, 50, 0};
+					((GridBagLayout)panel3.getLayout()).columnWidths = new int[] {135, 249, 244, 50, 0};
 					((GridBagLayout)panel3.getLayout()).rowHeights = new int[] {110, 105, 0};
 					((GridBagLayout)panel3.getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 0.0, 1.0E-4};
 					((GridBagLayout)panel3.getLayout()).rowWeights = new double[] {0.0, 0.0, 1.0E-4};
@@ -135,7 +135,7 @@ public class CreateSpecies extends JPanel {
 				{
 					panel4.setBackground(new Color(102, 102, 255));
 					panel4.setLayout(new GridBagLayout());
-					((GridBagLayout)panel4.getLayout()).columnWidths = new int[] {55, 249, 245, 50, 0};
+					((GridBagLayout)panel4.getLayout()).columnWidths = new int[] {155, 249, 245, 50, 0};
 					((GridBagLayout)panel4.getLayout()).rowHeights = new int[] {79, 0};
 					((GridBagLayout)panel4.getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 0.0, 1.0E-4};
 					((GridBagLayout)panel4.getLayout()).rowWeights = new double[] {0.0, 1.0E-4};
