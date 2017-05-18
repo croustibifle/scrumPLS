@@ -44,7 +44,7 @@ public class ScrapieTestMenu extends JPanel {
 		button2 = new JButton();
 
 		//======== this ========
-		setBackground(new Color(204, 0, 204));
+		setBackground(new Color(102, 0, 102));
 
 		// JFormDesigner evaluation mark
 		setBorder(new javax.swing.border.CompoundBorder(
