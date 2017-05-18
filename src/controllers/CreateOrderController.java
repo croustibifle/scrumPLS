@@ -37,4 +37,9 @@ public class CreateOrderController {
 		if (nbr <= 0)
 			view.error();
 	}
+
+	public AppController getApp() {
+		// TODO Auto-generated method stub
+		return app;
+	}
 }

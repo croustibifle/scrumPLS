@@ -5,7 +5,9 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.util.ArrayList;
 
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -18,6 +20,9 @@ import javax.swing.JTextField;
  */
 
 import controllers.CreateOrderController;
+import core.Customer;
+import core.Specie;
+import core.SpecieCategory;
 
 
 
@@ -53,12 +58,17 @@ public class CreateOrder extends JPanel {
 	}
 
 	private void initComponents() {
-		// JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
-		// Generated using JFormDesigner Evaluation license - Hugo Muller
+		
+		ArrayList<String> lClient = new ArrayList<String>(); 
+	    for (Customer c: controller.getApp().getDatas().getCustList().getListe()) {
+	        lClient.add(c.getName());
+	    }
+	    
 		label1 = new JLabel();
 		panel2 = new JPanel();
 		label2 = new JLabel();
 		comboBox1 = new JComboBox();
+		comboBox1.setModel(new DefaultComboBoxModel(lClient.toArray()));
 		button3 = new JButton();
 		label3 = new JLabel();
 		comboBox2 = new JComboBox();
@@ -220,6 +230,35 @@ public class CreateOrder extends JPanel {
 				ae ->{
 					  controller.submitSamplesNbr(Integer.parseInt(textField1.getText()));
 					  });
+		comboBox1.addActionListener(
+				ae ->{
+					ArrayList<String> ls = new ArrayList<String>();
+				    for (SpecieCategory c: controller.getApp().getDatas().getCatList().getListe()) {
+				        ls.add(c.getName());
+				    }
+				    comboBox2.setModel(new DefaultComboBoxModel(ls.toArray()));
+					});
+		
+		comboBox2.addActionListener(
+				ae ->{
+					ArrayList<String> ls = new ArrayList<String>();
+					String cat = comboBox2.getSelectedItem().toString();
+					for (SpecieCategory catSpecie : controller.getApp().getDatas().getCatList().getListe()){
+						if (catSpecie.getName().equals(cat)){
+							for(Specie s : catSpecie.getSpecies()){
+								ls.add(s.getName());
+							}
+						}
+					}
+				    comboBox3.setModel(new DefaultComboBoxModel(ls.toArray()));
+					});
+		comboBox3.addActionListener(
+				ae ->{
+					ArrayList<String> ls = new ArrayList<String>();
+					ls.add("Sexing test");
+					ls.add("Scrapie test");
+				    comboBox4.setModel(new DefaultComboBoxModel(ls.toArray()));
+					});
 	}
 	
 	public void error(){

@@ -47,4 +47,12 @@ public class Customer {
 	  return name;
   }
 
+  public void setName(String name2) {
+	name = name2;
+  }
+  
+  public void setCity(String city) {
+	town = city;
+  }
+
 }
