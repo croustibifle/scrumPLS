@@ -23,6 +23,10 @@ public class ScrapieTest extends Analysis {
   public String getName() {
 	return name;
   }
+  
+  public ScrapieTest(Specie sp){
+	 super(sp); 
+  }
 
   public  ScrapieTest(Specie s, int pos, int val) {
 	super(s);

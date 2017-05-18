@@ -1,6 +1,10 @@
 package controllers;
-import java.awt.Component;
 
+import core.Customer;
+import core.Order;
+import core.ScrapieTest;
+import core.Specie;
+import core.SpecieCategory;
 import user_interface.secretary.CreateOrder;
 
 public class CreateOrderController {
@@ -33,9 +37,32 @@ public class CreateOrderController {
 		app.createCategory();
 	}
 	
-	public void submitSamplesNbr(int nbr) {
-		if (nbr <= 0)
+	public void submitForm(String client, String cat, String spe, String analysis, int nbr) {
+		if (nbr <= 0){
 			view.error();
+		}
+		else{
+			for (Customer c : app.getDatas().getCustList().getListe()){
+				if (c.getName().equals(client))
+					for (SpecieCategory sc : app.getDatas().getCatList().getListe()){
+						if(sc.getName().equals(cat)){
+							for (Specie s : sc.getSpecies()){
+								if(s.getName().equals(spe)){
+									if(analysis.equals("Sexing test")){
+										Order ord = new Order(c, sc, s, nbr);
+										c.addOrder(ord);
+										view.validate();
+									}else{
+										Order ord = new Order(c, sc, s, nbr);
+										c.addOrder(ord);
+										view.validate();
+									}
+								}
+							}
+						}
+					}
+			}
+		}
 	}
 
 	public AppController getApp() {

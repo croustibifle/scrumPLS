@@ -228,7 +228,11 @@ public class CreateOrder extends JPanel {
 					  });
 		button1.addActionListener(
 				ae ->{
-					  controller.submitSamplesNbr(Integer.parseInt(textField1.getText()));
+					  controller.submitForm(comboBox1.getSelectedItem().toString(),
+							  				comboBox2.getSelectedItem().toString(),
+							  				comboBox3.getSelectedItem().toString(),
+							  				comboBox4.getSelectedItem().toString(),
+							  				Integer.parseInt(textField1.getText()));
 					  });
 		comboBox1.addActionListener(
 				ae ->{

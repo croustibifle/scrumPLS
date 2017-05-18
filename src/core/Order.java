@@ -74,6 +74,6 @@ public class Order {
 	}
 	
 	  public String toString(){
-		  return "Order n°" + (this.getCustomer().getOrders().indexOf(this)+1);
+		  return "Order num " + (this.getCustomer().getOrders().indexOf(this)+1);
 	  }
 }
