@@ -130,6 +130,10 @@ public class SecretaryMenu extends JPanel {
 				ae ->{
 					  controller.goCreateCategory();
 					  });
+		button5.addActionListener(
+				ae ->{
+					  controller.goBack();
+					  });
 	}
 
 }

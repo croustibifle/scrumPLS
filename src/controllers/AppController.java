@@ -18,6 +18,7 @@ public class AppController {
 	
 	public void homePage(){
 		HomeController c = new HomeController(this);
+		frame.getContentPane().removeAll();
 		frame.add(c.getView());
 		frame.setVisible(true);
 	}
