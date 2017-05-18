@@ -99,7 +99,5 @@ public class Home extends JPanel{
 
 	public String getPasswordField() {
 		return passwordField.getText();
-	}
-	
-	
+	}	
 }

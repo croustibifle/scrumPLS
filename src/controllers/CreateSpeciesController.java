@@ -20,4 +20,15 @@ public class CreateSpeciesController {
 		return view;
 	}
 
+	public void submitForm(String specieName, String catName) {
+		if (app.getDatas().getCatList().addSpecie(specieName, catName))
+			app.secretaryMenu();
+		else
+			view.error();
+	}
+	
+	public AppController getApp(){
+		return app;
+	}
+
 }

@@ -1,12 +1,15 @@
 package user_interface.secretary;
 
 import java.awt.*;
+import java.util.ArrayList;
+
 import javax.swing.*;
 /*
  * Created by JFormDesigner on Wed May 17 16:01:57 CEST 2017
  */
 
 import controllers.CreateSpeciesController;
+import core.SpecieCategory;
 
 
 
@@ -35,8 +38,10 @@ public class CreateSpecies extends JPanel {
 	}
 
 	private void initComponents() {
-		// JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
-		// Generated using JFormDesigner Evaluation license - Maxime Tanguy
+		ArrayList<String> ls = new ArrayList<String>(); 
+	    for (SpecieCategory c: controller.getApp().getDatas().getCatList().getListe()) {
+	        ls.add(c.getName());
+	    }
 		panel1 = new JPanel();
 		label1 = new JLabel();
 		panel2 = new JPanel();
@@ -45,6 +50,7 @@ public class CreateSpecies extends JPanel {
 		textField1 = new JTextField();
 		label3 = new JLabel();
 		comboBox1 = new JComboBox();
+		comboBox1.setModel(new DefaultComboBoxModel(ls.toArray()));
 		panel4 = new JPanel();
 		button1 = new JButton();
 		button2 = new JButton();
@@ -160,9 +166,17 @@ public class CreateSpecies extends JPanel {
 	}
 	
 	private void addListener() {
+		button1.addActionListener(
+				ae ->{
+					  controller.submitForm(textField1.getText(), comboBox1.getSelectedItem().toString());
+					  });
 		button2.addActionListener(
 				ae ->{
 					  controller.goBack();
 					  });
+	}
+	
+	public void error(){
+		JOptionPane.showMessageDialog(this, "The specie already exists", "Error", JOptionPane.ERROR_MESSAGE);
 	}
 }
