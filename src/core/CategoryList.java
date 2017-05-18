@@ -48,24 +48,26 @@ public class CategoryList {
 					return false;
 				}
 			}
-		}
-		if(b)
-		{
-			int i=0;
-			for(SpecieCategory t : liste)
-			{
-				if(t.getName().equals(theCateg))
-				{
-					return false;
-				}
-				i++;
-			}
-			if(i < liste.size())
-			{
-				liste.get(i).addSpecie(new Specie(theName));
+				t.addSpecie(new Specie(theName));
 				return true;
-			}
 		}
+//		if(b)
+//		{
+//			int i=0;
+//			for(SpecieCategory t : liste)
+//			{
+//				if(t.getName().equals(theCateg))
+//				{
+//					return false;
+//				}
+//				i++;
+//			}
+//			if(i < liste.size())
+//			{
+//				liste.get(i).addSpecie(new Specie(theName));
+//				return true;
+//			}
+//		}
 		return false;
 	}
 	
