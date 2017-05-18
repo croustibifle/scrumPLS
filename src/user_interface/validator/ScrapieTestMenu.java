@@ -5,16 +5,23 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.util.ArrayList;
 
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 /*
  * Created by JFormDesigner on Wed May 17 15:44:57 CEST 2017
  */
+
+import controllers.ScrapieTestController;
+import core.Specie;
+import core.SpecieCategory;
 
 
 
@@ -22,19 +29,40 @@ import javax.swing.JTextField;
  * @author Hugo Muller
  */
 public class ScrapieTestMenu extends JPanel {
-	JFrame j;
-	public ScrapieTestMenu(JFrame j) {
-		this.j = j;
+	
+	private JLabel label4;
+	private JPanel panel1;
+	private JLabel label1;
+	private JComboBox comboBox1;
+	private JLabel label2;
+	private JTextField textField1;
+	private JLabel label3;
+	private JTextField textField2;
+	private JPanel panel2;
+	private JButton button1;
+	private JButton button2;
+	private ScrapieTestController controller;
+	
+	public ScrapieTestMenu(ScrapieTestController c) {
+		controller = c;
 		initComponents();
+		addListener();
 	}
 
 	private void initComponents() {
-		// JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
-		// Generated using JFormDesigner Evaluation license - Hugo Muller
+		
+		ArrayList<String> ls = new ArrayList<String>(); 
+	    for (SpecieCategory c: controller.getApp().getDatas().getCatList().getListe()) {
+	        for (Specie s : c.getSpecies()){
+	        	ls.add(s.getName());
+	        }
+	    }
+	    
 		label4 = new JLabel();
 		panel1 = new JPanel();
 		label1 = new JLabel();
 		comboBox1 = new JComboBox();
+		comboBox1.setModel(new DefaultComboBoxModel(ls.toArray()));
 		label2 = new JLabel();
 		textField1 = new JTextField();
 		label3 = new JLabel();
@@ -137,18 +165,19 @@ public class ScrapieTestMenu extends JPanel {
 		// JFormDesigner - End of component initialization  //GEN-END:initComponents
 	}
 
-	// JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-	// Generated using JFormDesigner Evaluation license - Hugo Muller
-	private JLabel label4;
-	private JPanel panel1;
-	private JLabel label1;
-	private JComboBox comboBox1;
-	private JLabel label2;
-	private JTextField textField1;
-	private JLabel label3;
-	private JTextField textField2;
-	private JPanel panel2;
-	private JButton button1;
-	private JButton button2;
-	// JFormDesigner - End of variables declaration  //GEN-END:variables
+	private void addListener() {
+		button1.addActionListener(
+				ae ->{
+					  controller.submitForm(comboBox1.getSelectedItem().toString(), Integer.parseInt(textField1.getText()), Integer.parseInt(textField2.getText()));
+					  });
+		button2.addActionListener(
+				ae ->{
+					  controller.goBack();
+					  });
+	}
+	
+	public void validate() {
+		JOptionPane.showMessageDialog(this, "The scrapie test has been created", "Validation", JOptionPane.INFORMATION_MESSAGE);
+	}
+	
 }

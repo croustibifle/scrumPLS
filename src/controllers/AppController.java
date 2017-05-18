@@ -38,7 +38,10 @@ public class AppController {
 	}
 	
 	public void scrapieTest() {
-		// TODO Auto-generated method stub
+		ScrapieTestController c = new ScrapieTestController(this);
+		frame.getContentPane().removeAll();
+		frame.add(c.getView());
+		frame.validate();
 	}
 	
 	public void secretaryMenu() {
