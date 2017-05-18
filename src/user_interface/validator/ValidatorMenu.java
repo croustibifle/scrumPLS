@@ -102,7 +102,7 @@ public class ValidatorMenu extends JPanel {
 
 			//---- button4 ----
 			button4.setText("Create Sexing Test");
-			button4.setFont(button4.getFont().deriveFont(button4.getFont().getSize() + 5f));
+			button4.setFont(new Font("Tahoma", Font.PLAIN, 16));
 			button4.setMinimumSize(new Dimension(300, 100));
 			button4.setMaximumSize(new Dimension(300, 100));
 			button4.setPreferredSize(new Dimension(250, 100));
