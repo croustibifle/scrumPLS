@@ -29,7 +29,7 @@ public class SpecieCategory {
     return name;
   }
 
-  public final ArrayList<Specie> getSpecies() {
+  public ArrayList<Specie> getSpecies() {
     return species;
   }
 
