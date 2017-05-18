@@ -240,7 +240,8 @@ public class ExploreOrder extends JPanel{
 				DefaultMutableTreeNode order = new DefaultMutableTreeNode(o);
 				customer.add(order);
 			}
-			root.add(customer);
+			if(c.getOrders().size() > 0)
+				root.add(customer);
 		}
 		return(root);
 	}
