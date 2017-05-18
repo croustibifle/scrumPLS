@@ -52,7 +52,7 @@ public class SecretaryMenu extends JPanel {
 		setBackground(new Color(102, 0, 102));
 
 		setLayout(new GridBagLayout());
-		((GridBagLayout)getLayout()).columnWidths = new int[] {26, 578, 21, 0};
+		((GridBagLayout)getLayout()).columnWidths = new int[] {95, 578, 21, 0};
 		((GridBagLayout)getLayout()).rowHeights = new int[] {107, 276, 53, 0};
 		((GridBagLayout)getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 1.0E-4};
 		((GridBagLayout)getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 1.0E-4};

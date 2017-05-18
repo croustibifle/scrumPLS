@@ -41,7 +41,7 @@ public class Home extends JPanel{
 		setBackground(new Color(102, 0, 102));
 		
 		setLayout(new GridBagLayout());
-		((GridBagLayout)getLayout()).columnWidths = new int[] {76, 58, 94, 73, 77, 0, 76, 106, 56, 70, 0, 0};
+		((GridBagLayout)getLayout()).columnWidths = new int[] {30, 58, 94, 73, 77, 0, 76, 106, 56, 70, 0, 0};
 		((GridBagLayout)getLayout()).rowHeights = new int[] {53, 61, 95, 49, 54, 55, 48, 54, 76, 0};
 		((GridBagLayout)getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0E-4};
 		((GridBagLayout)getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0E-4};
