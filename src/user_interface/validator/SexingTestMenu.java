@@ -76,13 +76,6 @@ public class SexingTestMenu extends JPanel {
 		//======== this ========
 		setBackground(new Color(102, 102, 255));
 
-		// JFormDesigner evaluation mark
-		setBorder(new javax.swing.border.CompoundBorder(
-			new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
-				"JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
-				javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
-				java.awt.Color.red), getBorder())); addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
-
 		setLayout(new GridBagLayout());
 		((GridBagLayout)getLayout()).columnWidths = new int[] {35, 742, 25, 0};
 		((GridBagLayout)getLayout()).rowHeights = new int[] {99, 408, 67, 0};
