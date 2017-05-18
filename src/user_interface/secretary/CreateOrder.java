@@ -216,9 +216,13 @@ public class CreateOrder extends JPanel {
 				ae ->{
 					  controller.goCreateSpecies();
 					  });
+		button1.addActionListener(
+				ae ->{
+					  controller.submitSamplesNbr(Integer.parseInt(textField1.getText()));
+					  });
 	}
 	
 	public void error(){
-		JOptionPane.showMessageDialog(this, "Veuillez entrer une valeur entière et strictement positive svp.", "Error", JOptionPane.ERROR_MESSAGE);
+		JOptionPane.showMessageDialog(this, "Please enter a positive integer.", "Error", JOptionPane.ERROR_MESSAGE);
 	}
 }
