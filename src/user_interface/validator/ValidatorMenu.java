@@ -23,6 +23,7 @@ public class ValidatorMenu extends JPanel {
 	
 	private JLabel label1;
 	private JPanel panel1;
+	private JButton button1;
 	private JButton button2;
 	private JButton button3;
 	private JPanel panel2;
@@ -45,6 +46,7 @@ public class ValidatorMenu extends JPanel {
 		// Generated using JFormDesigner Evaluation license - Hugo Muller
 		label1 = new JLabel();
 		panel1 = new JPanel();
+		button1 = new JButton();
 		button2 = new JButton();
 		button3 = new JButton();
 
@@ -77,7 +79,13 @@ public class ValidatorMenu extends JPanel {
 		add(label1, new GridBagConstraints(2, 0, 1, 1, 0.0, 0.0,
 			GridBagConstraints.CENTER, GridBagConstraints.NONE,
 			new Insets(0, 0, 5, 5), 0, 0));
-
+		
+		//---- button1 ----
+		button1.setText("D\u00e9connexion");
+		add(button1, new GridBagConstraints(3, 0, 1, 1, 0.0, 0.0,
+			GridBagConstraints.EAST, GridBagConstraints.NONE,
+			new Insets(0, 0, 5, 5), 0, 0));
+		
 		//======== panel1 ========
 		{
 			panel1.setLayout(new GridBagLayout());
