@@ -10,7 +10,7 @@ public class CategoryList {
 		liste = new ArrayList<SpecieCategory>();
 	}
 	
-	public void addCategory(String theName)
+	public boolean addCategory(String theName)
 	{
 		if(!theName.isEmpty())
 		{
@@ -21,14 +21,15 @@ public class CategoryList {
 		{
 			if(t.getName().equals(theName))
 			{
-				b = false;
-				break;
+				return false;
 			}
 		}
 		if(b)
 		{
 			liste.add(new SpecieCategory(theName));
+			return true;
 		}
+		return false;
 	}
 	
 	

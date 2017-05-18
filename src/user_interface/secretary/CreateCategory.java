@@ -6,12 +6,18 @@ import javax.swing.*;
  * Created by JFormDesigner on Thu May 18 09:25:28 CEST 2017
  */
 
+import controllers.CreateCategoryController;
+
 /**
  * @author Maxime Tanguy
  */
 public class CreateCategory extends JPanel {
-	public CreateCategory() {
+	private CreateCategoryController c;
+	public CreateCategory(CreateCategoryController c) {
+		this.c = c;
 		initComponents();
+		addListener();
+		
 	}
 
 	private void initComponents() {
@@ -29,13 +35,7 @@ public class CreateCategory extends JPanel {
 		//======== this ========
 		setBackground(new Color(204, 0, 204));
 
-		// JFormDesigner evaluation mark
-		setBorder(new javax.swing.border.CompoundBorder(
-			new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
-				"JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
-				javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
-				java.awt.Color.red), getBorder())); addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
-
+		
 		setLayout(new GridBagLayout());
 		((GridBagLayout)getLayout()).columnWidths = new int[] {600, 0};
 		((GridBagLayout)getLayout()).rowHeights = new int[] {75, 425, 0};
@@ -128,4 +128,25 @@ public class CreateCategory extends JPanel {
 	private JButton button1;
 	private JButton button2;
 	// JFormDesigner - End of variables declaration  //GEN-END:variables
+	
+	private void addListener(){
+		button1.addActionListener(
+				ae ->{
+					  c.submitForm(textField1.getText());
+					  });
+		button2.addActionListener(
+				ae ->{
+					  c.goBack();
+					  });
+	}
+	
+	public void error() {
+		JOptionPane.showMessageDialog(this, "The category already exists", "Error", JOptionPane.ERROR_MESSAGE);
+		
+	}
+	
+	public void validate() {
+		JOptionPane.showMessageDialog(this, "The category has been created", "Validation", JOptionPane.INFORMATION_MESSAGE);
+		
+	}
 }

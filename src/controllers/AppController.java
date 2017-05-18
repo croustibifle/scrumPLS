@@ -70,8 +70,9 @@ public class AppController {
 	}
 	
 	public void createCategory() {
+		CreateCategoryController c = new CreateCategoryController(this);
 		frame.getContentPane().removeAll();
-		frame.add(new CreateCategory());
+		frame.add(c.getView());
 		frame.validate();
 	}
 	
