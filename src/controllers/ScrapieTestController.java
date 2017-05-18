@@ -34,7 +34,7 @@ public class ScrapieTestController {
 	        	if (s.getName().equals(name)){
 	        		new ScrapieTest(s,pos,val);
 	        		view.validate();
-	        		app.secretaryMenu();
+	        		app.validatorMenu();
 	        		break;
 	        	}
 	        }
