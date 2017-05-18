@@ -90,7 +90,7 @@ public class Home extends JPanel{
 	}
 	
 	public void error(){
-		JOptionPane.showMessageDialog(this, "Les identifiants sont incorrects", "Error", JOptionPane.ERROR_MESSAGE);
+		JOptionPane.showMessageDialog(this, "Login credentials are invalid", "Error", JOptionPane.ERROR_MESSAGE);
 	}
 
 	public String getLoginField() {
