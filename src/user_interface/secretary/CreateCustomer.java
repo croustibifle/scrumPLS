@@ -9,6 +9,7 @@ import java.awt.Insets;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 /*
@@ -28,9 +29,9 @@ public class CreateCustomer extends JPanel {
 	private JLabel label1;
 	private JPanel panel1;
 	private JLabel label2;
-	private JTextField textField1;
+	private JTextField clientNameField;
 	private JLabel label3;
-	private JTextField textField2;
+	private JTextField cityClientField;
 	private JPanel panel2;
 	private JButton button1;
 	private JButton button2;
@@ -48,9 +49,9 @@ public class CreateCustomer extends JPanel {
 		label1 = new JLabel();
 		panel1 = new JPanel();
 		label2 = new JLabel();
-		textField1 = new JTextField();
+		clientNameField = new JTextField();
 		label3 = new JLabel();
-		textField2 = new JTextField();
+		cityClientField = new JTextField();
 		panel2 = new JPanel();
 		button1 = new JButton();
 		button2 = new JButton();
@@ -81,22 +82,22 @@ public class CreateCustomer extends JPanel {
 			((GridBagLayout)panel1.getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 0.0, 1.0E-4};
 
 			//---- label2 ----
-			label2.setText("Name client :");
+			label2.setText("Client name :");
 			label2.setFont(new Font("Tahoma", Font.PLAIN, 16));
 			panel1.add(label2, new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0,
 				GridBagConstraints.CENTER, GridBagConstraints.VERTICAL,
 				new Insets(0, 0, 5, 5), 0, 0));
-			panel1.add(textField1, new GridBagConstraints(2, 1, 1, 1, 0.0, 0.0,
+			panel1.add(clientNameField, new GridBagConstraints(2, 1, 1, 1, 0.0, 0.0,
 				GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL,
 				new Insets(0, 0, 5, 5), 0, 0));
 
 			//---- label3 ----
-			label3.setText("Name city :");
+			label3.setText("City :");
 			label3.setFont(new Font("Tahoma", Font.PLAIN, 16));
 			panel1.add(label3, new GridBagConstraints(1, 2, 1, 1, 0.0, 0.0,
 				GridBagConstraints.CENTER, GridBagConstraints.VERTICAL,
 				new Insets(0, 0, 5, 5), 0, 0));
-			panel1.add(textField2, new GridBagConstraints(2, 2, 1, 1, 0.0, 0.0,
+			panel1.add(cityClientField, new GridBagConstraints(2, 2, 1, 1, 0.0, 0.0,
 				GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL,
 				new Insets(0, 0, 5, 5), 0, 0));
 		}
@@ -134,9 +135,16 @@ public class CreateCustomer extends JPanel {
 	}
 	
 	private void addListener(){
+		button1.addActionListener(
+				ae ->{
+					  controller.submitForm(clientNameField.getText(), cityClientField.getText());
+					  });
 		button2.addActionListener(
 				ae ->{
 					  controller.goBack();
 					  });
+	}
+	public void error(){
+		JOptionPane.showMessageDialog(this, "The customer already exists", "Error", JOptionPane.ERROR_MESSAGE);
 	}
 }
