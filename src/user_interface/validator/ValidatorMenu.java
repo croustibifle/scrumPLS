@@ -53,11 +53,11 @@ public class ValidatorMenu extends JPanel {
 		button4 = new JButton();
 
 		//======== this ========
-		setBackground(new Color(102, 0, 102));
+		setBackground(new Color(102, 102, 255));
 
 		// JFormDesigner evaluation mark
 		setLayout(new GridBagLayout());
-		((GridBagLayout)getLayout()).columnWidths = new int[] {0, 236, 264, 256, 17, 0};
+		((GridBagLayout)getLayout()).columnWidths = new int[] {20, 236, 264, 256, 17, 0};
 		((GridBagLayout)getLayout()).rowHeights = new int[] {133, 343, 64, 0};
 		((GridBagLayout)getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 1.0E-4};
 		((GridBagLayout)getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 1.0E-4};
@@ -128,6 +128,10 @@ public class ValidatorMenu extends JPanel {
 		button1.addActionListener(
 				ae ->{
 					  controller.goBack();
+					  });
+		button4.addActionListener(
+				ae ->{
+					  controller.goSexingTest();
 					  });
 	}
 }

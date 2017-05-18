@@ -27,4 +27,8 @@ public class ValidMenuController {
 	public void goBack(){
 		app.homePage();
 	}
+
+	public void goSexingTest() {
+		app.sexingTest();
+	}
 }
