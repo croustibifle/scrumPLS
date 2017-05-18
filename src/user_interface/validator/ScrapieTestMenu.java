@@ -81,7 +81,7 @@ public class ScrapieTestMenu extends JPanel {
 				javax.swing.border.TitledBorder.BOTTOM), getBorder())); addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
 
 		setLayout(new GridBagLayout());
-		((GridBagLayout)getLayout()).columnWidths = new int[] {0, 607, 0, 0};
+		((GridBagLayout)getLayout()).columnWidths = new int[] {85, 607, 0, 0};
 		((GridBagLayout)getLayout()).rowHeights = new int[] {104, 299, 79, 0};
 		((GridBagLayout)getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 1.0E-4};
 		((GridBagLayout)getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 1.0E-4};
