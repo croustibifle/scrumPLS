@@ -28,6 +28,7 @@ public class SecretaryMenu extends JPanel {
 	private JButton button2;
 	private JButton button3;
 	private JButton button4;
+	private JButton button5;
 	private SecretaryMenuController controller;
 	
 	public SecretaryMenu(SecretaryMenuController c) {
@@ -45,6 +46,7 @@ public class SecretaryMenu extends JPanel {
 		button2 = new JButton();
 		button3 = new JButton();
 		button4 = new JButton();
+		button5 = new JButton();
 
 		//======== this ========
 		setBackground(new Color(204, 0, 204));
@@ -102,6 +104,12 @@ public class SecretaryMenu extends JPanel {
 		add(panel1, new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0,
 			GridBagConstraints.CENTER, GridBagConstraints.BOTH,
 			new Insets(0, 0, 5, 5), 0, 0));
+		
+		//---- button5 ----
+		button5.setText("Log out");
+		add(button5, new GridBagConstraints(1, 2, 1, 1, 0.0, 0.0,
+			GridBagConstraints.EAST, GridBagConstraints.NONE,
+			new Insets(0, 0, 0, 5), 0, 0));
 		// JFormDesigner - End of component initialization  //GEN-END:initComponents
 	}
 	
