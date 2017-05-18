@@ -2,7 +2,9 @@ package controllers;
 
 import core.Customer;
 import core.Order;
+import core.Sample;
 import core.ScrapieTest;
+import core.SexingTest;
 import core.Specie;
 import core.SpecieCategory;
 import user_interface.secretary.CreateOrder;
@@ -50,12 +52,20 @@ public class CreateOrderController {
 								if(s.getName().equals(spe)){
 									if(analysis.equals("Sexing test")){
 										Order ord = new Order(c, sc, s, nbr);
+										for(int i = 1; i <= nbr; i++){
+											ord.setSamples(new Sample(new SexingTest(s, 10, 10, 10, 10), s, ord));
+										}
 										c.addOrder(ord);
 										view.validate();
+										app.secretaryMenu();
 									}else{
 										Order ord = new Order(c, sc, s, nbr);
+										for(int i = 1; i <= nbr; i++){
+											ord.setSamples(new Sample(new ScrapieTest(s), s, ord));
+										}
 										c.addOrder(ord);
 										view.validate();
+										app.secretaryMenu();
 									}
 								}
 							}

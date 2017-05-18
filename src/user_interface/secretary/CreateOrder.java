@@ -268,4 +268,8 @@ public class CreateOrder extends JPanel {
 	public void error(){
 		JOptionPane.showMessageDialog(this, "Please enter a positive integer.", "Error", JOptionPane.ERROR_MESSAGE);
 	}
+	
+	public void validate() {
+		JOptionPane.showMessageDialog(this, "The order has been created", "Validation", JOptionPane.INFORMATION_MESSAGE);
+	}
 }
